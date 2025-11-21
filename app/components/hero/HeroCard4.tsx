@@ -5,7 +5,7 @@ import { LayoutTemplate } from "lucide-react";
 
 export function HeroCard4() {
   return (
-    <div className="absolute top-110 right-10 -rotate-7">
+    <div className="absolute top-110 right-10 -rotate-7 z-40">
       {/* Épingle */}
       <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-30">
         <div className="flex size-6 items-center justify-center">

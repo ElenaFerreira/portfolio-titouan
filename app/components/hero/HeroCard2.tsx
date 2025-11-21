@@ -9,7 +9,7 @@ const progresses = [
 
 export function HeroCard2() {
   return (
-    <div className="absolute top-100 left-10 rotate-3">
+    <div className="absolute top-100 left-10 rotate-3 z-40">
       {/* Trombone */}
       <div className="absolute -top-3 right-10 z-10">
         <div className="flex h-6 w-6 items-center justify-center">

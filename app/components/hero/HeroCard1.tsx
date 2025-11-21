@@ -12,7 +12,7 @@ const tasks = [
 
 export function HeroCard1() {
   return (
-    <div className="absolute top-16 left-16 -rotate-8">
+    <div className="absolute top-16 left-16 -rotate-8 z-40">
       {/* Épingle */}
       <div className="absolute -top-3 right-1/3 z-10 -translate-x-1/2 scale-x-[-1] -rotate-20">
         <div className="flex size-6 items-center justify-center">
