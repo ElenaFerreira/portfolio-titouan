@@ -16,9 +16,9 @@ export function HeroCenter() {
         {/* Avatars + texte */}
         <div className="flex items-center gap-3">
           <div className="flex -space-x-2">
-            <Avatar src="/images/client1.jpg" alt="Client 1" />
-            <Avatar src="/images/client2.png" alt="Client 2" />
-            <Avatar src="/images/client3.png" alt="Client 3" />
+            <Avatar src="/images/client1.jpeg" alt="Client 1" />
+            <Avatar src="/images/client2.jpeg" alt="Client 2" />
+            <Avatar src="/images/client3.jpeg" alt="Client 3" />
           </div>
           <p className="text-xs font-semibold text-gray-dark">Ils me font confiance</p>
         </div>
