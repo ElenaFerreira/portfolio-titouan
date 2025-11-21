@@ -6,7 +6,7 @@
   --color-black: var(--black);
   --color-white: var(--white);
   --color-dark: var(--dark);
-  --color-primary-button: var(--primary-button);
+  --color-primary: var(--primary);
   --color-blue-light: var(--blue-light);
   --color-gray-light: var(--gray-light);
   --color-gray: var(--gray);
@@ -19,7 +19,7 @@
     --black: #000000;
     --white: #ffffff;
     --dark: #2a2a2a;
-    --primary-button: #38a1f7;
+    --primary: #38a1f7;
     --blue-light: #e1f1fe;
     --gray-light: #d3d3d3;
     --gray: #7e7e7e;

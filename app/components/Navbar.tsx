@@ -41,7 +41,7 @@ export function Navbar() {
         <Link
           href="/cv.pdf"
           download
-          className="flex items-center gap-2 rounded-full bg-primary-button px-5 py-2.5 text-white text-sm font-medium shadow-[0_2px_6px_rgba(0,0,0,0.2)] hover:brightness-105 transition"
+          className="flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-white text-sm font-medium shadow-[0_2px_6px_rgba(0,0,0,0.2)] hover:brightness-105 transition"
         >
           <Download className="h-4 w-4" />
           Télécharger mon CV

@@ -49,8 +49,8 @@ type BulletState = "default" | "done";
 function RadioBullet({ state }: { state: BulletState }) {
   if (state === "done") {
     return (
-      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border-[1.5px] border-primary-button">
-        <span className="h-2.5 w-2.5 rounded-full bg-primary-button" />
+      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border-[1.5px] border-primary">
+        <span className="h-2.5 w-2.5 rounded-full bg-primary" />
       </span>
     );
   }
