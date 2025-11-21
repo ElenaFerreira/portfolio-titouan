@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Download } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -42,10 +43,7 @@ export function Navbar() {
           download
           className="flex items-center gap-2 rounded-full bg-primary-button px-5 py-2.5 text-white text-sm font-medium shadow-[0_2px_6px_rgba(0,0,0,0.2)] hover:brightness-105 transition"
         >
-          {/* Icône download */}
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 10l5 5m0 0 5-5m-5 5V4" />
-          </svg>
+          <Download className="h-4 w-4" />
           Télécharger mon CV
         </Link>
       </nav>

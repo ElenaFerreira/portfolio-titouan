@@ -10,6 +10,7 @@
   --color-blue-light: var(--blue-light);
   --color-gray-light: var(--gray-light);
   --color-gray: var(--gray);
+  --color-gray-lighter: var(--gray-lighter);
 }
 @layer utilities {
   :root {
@@ -22,6 +23,7 @@
     --blue-light: #e1f1fe;
     --gray-light: #d3d3d3;
     --gray: #7e7e7e;
+    --gray-lighter: #f6f7f9;
   }
 }
 
