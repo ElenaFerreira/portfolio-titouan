@@ -18,14 +18,14 @@ export function HeroCard2() {
       </div>
 
       {/* Carte */}
-      <div className="w-[260px] rounded-2xl border border-gray-light bg-white px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+      <div className="w-[260px] rounded-2xl bg-white px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
         {/* Titre */}
         <h3 className="mb-3 text-sm font-semibold text-primary">Progression journalière</h3>
 
         {/* Lignes de progression */}
         <div className="space-y-3">
           {progresses.map((item, index) => (
-            <div className="flex items-center gap-3">
+            <div key={index} className="flex items-center gap-3">
               <p className="text-xs font-medium text-dark whitespace-nowrap">{item.label}</p>
 
               <div className="flex-1 h-1.5 overflow-hidden rounded-full bg-gray-lighter">

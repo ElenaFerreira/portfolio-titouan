@@ -14,14 +14,14 @@ export function HeroCard1() {
   return (
     <div className="absolute top-16 left-16 -rotate-8">
       {/* Épingle */}
-      <div className="absolute -top-3 right-1/3 z-10 -translate-x-1/2">
-        <div className="flex h-6 w-6 items-center justify-center">
-          <Image src="/images/pin.png" alt="Pin" width={30} height={30} />
+      <div className="absolute -top-3 right-1/3 z-10 -translate-x-1/2 scale-x-[-1] -rotate-20">
+        <div className="flex size-6 items-center justify-center">
+          <Image src="/images/pin.svg" alt="Pin" width={30} height={30} />
         </div>
       </div>
 
       {/* Carte */}
-      <div className="w-[260px] rounded-2xl border border-gray-light bg-white overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+      <div className="w-[260px] rounded-2xl bg-white overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
         {/* Header */}
         <div className="flex items-center p-4 gap-2 bg-gray-lighter">
           <Star className="h-4 w-4" color="#38A1F7" fill="#38A1F7" />
