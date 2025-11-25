@@ -20,14 +20,14 @@ const tools = [
 
 export function HeroCenter() {
   return (
-    <div className="z-50 flex flex-col items-center gap-8 pb-16 pt-15 text-center backdrop-blur-xs">
+    <div className="z-50 flex flex-col items-center gap-8 pb-16 pt-15 text-center">
       {/* Logo carré bleu */}
       <div className="flex size-14 items-center justify-center rounded-2xl bg-primary">
         <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />
       </div>
 
       {/* Pill confiance */}
-      <div className="flex items-center gap-4 rounded-full border border-gray-light bg-white px-4 py-2">
+      <div className="flex items-center gap-4 rounded-full border border-gray-light bg-white p-2">
         {/* Avatars + texte */}
         <div className="flex items-center gap-3">
           <div className="flex -space-x-2">
