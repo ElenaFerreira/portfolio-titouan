@@ -19,7 +19,7 @@
 
     --black: #000000;
     --white: #ffffff;
-    --dark: #2a2a2a;
+    --dark: #282828;
     --primary: #38a1f7;
     --blue-light: #e1f1fe;
     --gray-light: #d3d3d3;
@@ -37,4 +37,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-lato);
+}
+
+@keyframes logos-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
