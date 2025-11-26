@@ -49,7 +49,7 @@ export function HeroCenter() {
       <div className="space-y-1">
         <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
           <span className="block">
-            D’une idée abstraite <br /> à une{" "}
+            D’une idée abstraite <br /> à une
             <span className="bg-linear-to-r from-primary to-blue-dark bg-clip-text font-extrabold text-transparent">interface concrète</span>
           </span>
         </h1>
