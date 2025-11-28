@@ -1,16 +1,14 @@
 "use client";
 
-import { FlaskConical, Monitor, Globe2, Laptop2, Paintbrush } from "lucide-react";
+import { FlaskConical, Laptop2, Paintbrush } from "lucide-react";
 import Image from "next/image";
+import { SectionTag } from "./ui/SectionTag";
 
 export function Global() {
   return (
     <section id="projects" className="flex flex-col items-center px-4 py-16 text-center bg-gray-lighter">
       {/* Tag */}
-      <div className="inline-flex items-center gap-2 rounded-full bg-white border border-gray-light px-4 py-2">
-        <FlaskConical className="size-4 text-dark" />
-        <span className="text-xs font-semibold text-dark">Vue d'ensemble</span>
-      </div>
+      <SectionTag icon={FlaskConical} label="Vue d'ensemble" variant="white" />
 
       {/* Titre */}
       <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Ma vision du design</h2>

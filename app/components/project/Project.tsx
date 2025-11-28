@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
 import { Tool } from "./ProjectModal";
+import { SectionTag } from "../ui/SectionTag";
 
 type ProjectCategory = "uiux" | "web" | "video";
 
@@ -138,10 +139,7 @@ export function Project() {
   return (
     <section id="projects" className="flex flex-col items-center px-4 py-16 text-center">
       {/* Tag */}
-      <div className="inline-flex items-center gap-2 rounded-full bg-gray-lighter border border-gray-light px-4 py-2">
-        <Folder className="size-4 text-dark" />
-        <span className="text-xs font-semibold text-dark">Mes projets</span>
-      </div>
+      <SectionTag icon={Folder} label="Mes projets" />
 
       {/* Titre */}
       <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Découvrez mes projets</h2>
