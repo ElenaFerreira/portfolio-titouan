@@ -104,12 +104,6 @@ export function ProjectCard({
   useLockBodyScroll(isOpen);
   useEscapeKey(closeModal, isOpen);
 
-  useEffect(() => {
-    if (!isOpen) {
-      cardRef.current?.focus();
-    }
-  }, [isOpen]);
-
   const gradientStyle = useMemo(
     () => ({
       background: `linear-gradient(180deg, ${bgFrom} 0%, ${bgTo} 100%)`,
