@@ -104,6 +104,10 @@ export function Project() {
           bgFrom="#295700"
           bgTo="#BEEE62"
           groupAvatars={["/images/client1.jpeg", "/images/client2.jpeg", "/images/profile.png"]}
+          description=" "
+          designText=" "
+          tools={[{ name: "Figma", iconSrc: "/images/tools/figma.svg" }]}
+          projectUrl="https://ton-lien-wapycloud.com"
         />
 
         <ProjectCard
@@ -115,6 +119,10 @@ export function Project() {
           dateLabel="Juin 2023"
           bgFrom="#EE1729"
           bgTo="#190101"
+          description=" "
+          designText=" "
+          tools={[{ name: "Figma", iconSrc: "/images/tools/figma.svg" }]}
+          projectUrl="https://ton-lien-wapycloud.com"
         />
 
         <ProjectCard
@@ -126,6 +134,10 @@ export function Project() {
           dateLabel="Janvier 2023"
           bgFrom="#4AB2DB"
           bgTo="#161616"
+          description=" "
+          designText=" "
+          tools={[{ name: "Figma", iconSrc: "/images/tools/figma.svg" }]}
+          projectUrl="https://ton-lien-wapycloud.com"
         />
       </div>
     </section>
