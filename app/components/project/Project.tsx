@@ -61,19 +61,36 @@ export function Project() {
           dateLabel="Juin 2025"
           bgFrom="#FF840A"
           bgTo="#FFD4A9"
-          soloAvatarSrc="/images/profile.png"
+          description="Wapycloud est une plateforme SaaS clé en main qui permet aux particuliers et entreprises de commander un site web designé à la main et développé sur mesure."
+          designText="Le design est moderne et épuré, pensé pour séduire un large public grâce à une palette claire et vive, avec des appels à l’action dynamiques qui encouragent l’engagement. L’ensemble repose sur une mise en page aérée et responsive, valorisant la simplicité et la performance."
+          designHighlights={["moderne", "épuré", "l'engagement", "aérée", "simplicité", "performance"]}
+          tools={[
+            { name: "Figma", iconSrc: "/images/tools/figma.svg" },
+            { name: "Dribbble", iconSrc: "/images/tools/dribbble.svg" },
+            { name: "ChatGPT", iconSrc: "/images/tools/openai.svg" },
+          ]}
+          projectUrl="https://ton-lien-wapycloud.com"
         />
 
         <ProjectCard
           coverSrc="/images/project/wapycloud.png"
           coverAlt="Site d’anglais Babel Master"
-          brandLabel="BAbel master"
+          brandLabel="Babel master"
           title="Site d’anglais Babel Master"
           subtitle="Design & Intégration"
           dateLabel="Mai 2025"
           bgFrom="#F73859"
           bgTo="#FFCFD7"
-          soloAvatarSrc="/images/profile.png"
+          description="Babel Masters est un site dédié aux particuliers souhaitant prendre des cours d’anglais à Nanterre, en visio ou en présentiel, avec des professeurs qualifiés."
+          designText="Le design de Babel Masters allie clarté, modernité et professionnalisme, avec une palette bleu/rose pensée pour inspirer confiance tout en captant l’attention. La structure aérée et les appels à l’action visibles facilitent la navigation et encouragent la prise de contact."
+          designHighlights={["clarté", "modernité", "professionnalisme", "confiance", "navigation", "contact"]}
+          tools={[
+            { name: "Figma", iconSrc: "/images/tools/figma.svg" },
+            { name: "Dribbble", iconSrc: "/images/tools/dribbble.svg" },
+            { name: "ChatGPT", iconSrc: "/images/tools/openai.svg" },
+            { name: "Wordpress", iconSrc: "/images/tools/wordpress.svg" },
+          ]}
+          projectUrl="https://ton-lien-wapycloud.com"
         />
 
         <ProjectCard
