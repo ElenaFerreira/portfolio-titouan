@@ -2,6 +2,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/hero/Hero";
 import { Project } from "./components/project/Project";
 import { Global } from "./components/Global";
+import { About } from "./components/about/About";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Project />
       <Global />
+      <About />
     </main>
   );
 }
