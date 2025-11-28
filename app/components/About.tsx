@@ -2,7 +2,7 @@
 
 import { CircleUserRound, Check } from "lucide-react";
 import Image from "next/image";
-import { SectionTag } from "../ui/SectionTag";
+import { SectionTag } from "./ui/SectionTag";
 
 export function About() {
   return (
