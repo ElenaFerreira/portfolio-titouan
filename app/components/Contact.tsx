@@ -1,6 +1,7 @@
 "use client";
 
-import { AtSign, Mail, Linkedin, MapPin, ArrowRight, Send } from "lucide-react";
+import { useState } from "react";
+import { AtSign, Mail, Linkedin, MapPin, ArrowRight, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import { SectionTag } from "./ui/SectionTag";
 
 interface ContactCard {
@@ -31,7 +32,56 @@ const contactCards: ContactCard[] = [
   },
 ];
 
+type FormStatus = "idle" | "loading" | "success" | "error";
+
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Une erreur est survenue");
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+
+      // Reset le status après 5 secondes
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "Une erreur est survenue");
+
+      // Reset le status après 5 secondes
+      setTimeout(() => setStatus("idle"), 5000);
+    }
+  };
+
   return (
     <section id="contact" className="flex flex-col items-center px-4 py-16">
       <div className="w-full max-w-[1040px] mx-auto">
@@ -80,28 +130,70 @@ export function Contact() {
                 Utilisez le formulaire de contact ci-dessous pour me faire part de vos questions ou de vos demandes.
               </p>
 
-              <form className="mt-6 flex flex-col gap-4">
+              <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Votre nom"
-                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors"
+                  required
+                  disabled={status === "loading"}
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Votre email"
-                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors"
+                  required
+                  disabled={status === "loading"}
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 />
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Votre message"
                   rows={4}
-                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors resize-none"
+                  required
+                  disabled={status === "loading"}
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors resize-y min-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
+
+                {/* Message de succès */}
+                {status === "success" && (
+                  <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">
+                    <CheckCircle className="size-5 flex-shrink-0" />
+                    <p className="text-sm font-medium">Message envoyé avec succès !</p>
+                  </div>
+                )}
+
+                {/* Message d'erreur */}
+                {status === "error" && (
+                  <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                    <AlertCircle className="size-5 flex-shrink-0" />
+                    <p className="text-sm font-medium">{errorMessage}</p>
+                  </div>
+                )}
+
                 <button
-                  type="button"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <Send className="size-4" />
-                  Envoyer
+                  {status === "loading" ? (
+                    <>
+                      <Loader2 className="size-4 animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="size-4" />
+                      Envoyer
+                    </>
+                  )}
                 </button>
               </form>
             </div>
