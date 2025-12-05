@@ -6,6 +6,7 @@ import { About } from "./components/About";
 import { Jobs } from "./components/Jobs";
 import { Skills } from "./components/Skills";
 import { Testimonials } from "./components/Testimonials";
+import { Contact } from "./components/Contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Jobs />
       <Skills />
       <Testimonials />
+      <Contact />
     </main>
   );
 }
