@@ -21,7 +21,7 @@ const experiences: JobExperience[] = [
     period: "Sept. 2023 - Aujourd'hui",
     description:
       "Maintenance du site : création de newsletters et de designs web, intégration front-end (Symfony, PHP, HTML, CSS, JS) et mise en place continue de nouvelle page et de nouveaux designs.",
-    logo: "/images/Youdge.svg",
+    logo: "/images/jobs/Youdge.svg",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const experiences: JobExperience[] = [
     period: "Mai 2023 - Juill. 2023",
     description:
       "Redesign d'un site web : conception de maquettes UI/UX, développement du site avec les languages HTML, CSS, PHP, JS et debbugage d'une application Android (Java/Kotlin).",
-    logo: "/images/uGetWin.svg",
+    logo: "/images/jobs/uGetWin.svg",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const experiences: JobExperience[] = [
     period: "Juin 2022 - Juill. 2022",
     description:
       "Participation à la création de supports de communication : réalisation de flyers promotionnels, gestion et animation des réseaux sociaux de l'entreprise, ainsi que conception d'une affiche publicitaire pour une nouvelle gamme de glaces.",
-    logo: "/images/RER_Restauration.svg",
+    logo: "/images/jobs/RER_Restauration.svg",
   },
 ];
 
