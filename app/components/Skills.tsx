@@ -18,8 +18,8 @@ import {
   Compass,
   Cpu,
 } from "lucide-react";
-import Image from "next/image";
 import { SectionTag } from "./ui/SectionTag";
+import { IconTag } from "./ui/IconTag";
 
 interface Tool {
   name: string;
@@ -92,10 +92,7 @@ export function Skills() {
       <div className="w-full max-w-[1040px] mx-auto mt-10">
         <div className="flex flex-wrap justify-center gap-3">
           {tools.map((tool) => (
-            <div key={tool.name} className="flex items-center gap-2 rounded-sm border border-gray-light bg-white p-1 text-sm font-medium text-dark">
-              {tool.icon ? <Image src={tool.icon} alt={tool.name} width={16} height={16} className="object-contain" /> : tool.lucideIcon}
-              <span>{tool.name}</span>
-            </div>
+            <IconTag key={tool.name} label={tool.name} imageSrc={tool.icon} icon={tool.lucideIcon} />
           ))}
         </div>
       </div>
@@ -109,10 +106,7 @@ export function Skills() {
       <div className="w-full max-w-[1040px] mx-auto mt-8">
         <div className="flex flex-wrap justify-center gap-3">
           {uxSkillsList.map((skill) => (
-            <div key={skill.name} className="flex items-center gap-2 rounded-sm border border-gray-light bg-white p-1 text-sm font-medium text-dark">
-              {skill.icon}
-              <span>{skill.name}</span>
-            </div>
+            <IconTag key={skill.name} label={skill.name} icon={skill.icon} />
           ))}
         </div>
       </div>
@@ -126,10 +120,7 @@ export function Skills() {
       <div className="w-full max-w-[1040px] mx-auto mt-8">
         <div className="flex flex-wrap justify-center gap-3">
           {softSkillsList.map((skill) => (
-            <div key={skill.name} className="flex items-center gap-2 rounded-sm border border-gray-light bg-white p-1 text-sm font-medium text-dark">
-              {skill.icon}
-              <span>{skill.name}</span>
-            </div>
+            <IconTag key={skill.name} label={skill.name} icon={skill.icon} />
           ))}
         </div>
       </div>

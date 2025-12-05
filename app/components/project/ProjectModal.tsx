@@ -3,6 +3,7 @@
 import { useEffect, useRef, ReactNode } from "react";
 import Image from "next/image";
 import { X, ExternalLink } from "lucide-react";
+import { IconTag } from "../ui/IconTag";
 
 export type Tool = {
   name: string;
@@ -91,13 +92,7 @@ export function ProjectModal({
               <div className="flex w-full flex-wrap items-center justify-between gap-2">
                 <div className="flex flex-wrap gap-2">
                   {tools.map((tool) => (
-                    <span
-                      key={tool.name}
-                      className="inline-flex items-center gap-1 rounded-sm border border-gray-light bg-gray-lighter px-3 py-1 text-xs font-semibold text-dark"
-                    >
-                      {tool.iconSrc && <Image src={tool.iconSrc} alt={tool.name} width={16} height={16} className="object-contain" />}
-                      {tool.name}
-                    </span>
+                    <IconTag key={tool.name} label={tool.name} imageSrc={tool.iconSrc} variant="gray" />
                   ))}
                 </div>
 

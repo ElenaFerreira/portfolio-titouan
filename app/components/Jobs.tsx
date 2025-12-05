@@ -3,6 +3,7 @@
 import { Briefcase, CalendarDays } from "lucide-react";
 import Image from "next/image";
 import { SectionTag } from "./ui/SectionTag";
+import { IconTag } from "./ui/IconTag";
 
 interface JobExperience {
   id: number;
@@ -95,10 +96,7 @@ export function Jobs() {
                     </div>
 
                     {/* Date à droite */}
-                    <div className="flex items-center gap-2 text-sm text-dark shrink-0 md:mt-1 border border-gray-light rounded-sm p-1">
-                      <CalendarDays className="size-4" />
-                      <span className="font-medium">{experience.period}</span>
-                    </div>
+                    <IconTag label={experience.period} icon={<CalendarDays className="size-4" />} className="shrink-0 md:mt-1" />
                   </div>
 
                   {/* Bordure de séparation */}

@@ -52,14 +52,14 @@ export function About() {
 
             {/* Points clés avec checkmarks */}
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <div className="flex items-center gap-3 rounded-full border border-gray-light py-1 px-2">
+              <div className="flex items-center gap-3 rounded-full border border-gray-light p-1 pr-2">
                 <div className="flex size-6 items-center justify-center rounded-full bg-primary">
                   <Check className="size-4 text-white" strokeWidth={3} />
                 </div>
                 <span className="text-sm font-medium text-dark">Basé dans l'Oise</span>
               </div>
 
-              <div className="flex items-center gap-3 rounded-full border border-gray-light py-1 px-2">
+              <div className="flex items-center gap-3 rounded-full border border-gray-light p-1 pr-2">
                 <div className="flex size-6 items-center justify-center rounded-full bg-primary">
                   <Check className="size-4 text-white" strokeWidth={3} />
                 </div>
