@@ -24,7 +24,7 @@ export function Global() {
         <div className="w-full flex gap-2">
           {/* Carte 1 : UX & UI (2/3) */}
           <div className="w-3/5 p-2">
-            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left border border-gray-light md:flex-row md:items-center h-full">
+            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left border border-border md:flex-row md:items-center h-full">
               {/* Vidéo */}
               <div className="relative mb-4 h-40 w-full overflow-hidden rounded-2xl md:mb-0 md:h-44 md:w-56 md:shrink-0">
                 <video src="/videos/video1.mp4" autoPlay loop muted playsInline className="h-full w-full object-cover" />
@@ -46,7 +46,7 @@ export function Global() {
 
           {/* Carte 2 : Développement Wordpress (1/3) */}
           <div className="w-2/5 p-2">
-            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left h-full border border-gray-light">
+            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left h-full border border-border">
               {/* Contenu texte */}
               <div className="flex flex-col gap-3">
                 <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-md">
@@ -67,7 +67,7 @@ export function Global() {
         <div className="w-full flex gap-2">
           {/* Carte 3 : Expériences Web Interactives (1/3) */}
           <div className="w-2/5 p-2">
-            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left h-full border border-gray-light">
+            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left h-full border border-border">
               {/* Contenu texte */}
               <div className="flex flex-col gap-3">
                 <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-md">
@@ -85,7 +85,7 @@ export function Global() {
 
           {/* Carte 4 : Design & Créativité (2/3) */}
           <div className="w-3/5 p-2">
-            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left md:flex-row md:items-center h-full border border-gray-light">
+            <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left md:flex-row md:items-center h-full border border-border">
               {/* Vidéo */}
               <div className="relative mb-4 h-40 w-full overflow-hidden rounded-2xl bg-gray-100 md:mb-0 md:h-44 md:w-56 md:shrink-0">
                 <video src="/videos/video2.mp4" autoPlay loop muted playsInline className="h-full w-full object-cover" />

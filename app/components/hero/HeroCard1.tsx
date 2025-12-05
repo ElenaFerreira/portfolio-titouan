@@ -31,7 +31,7 @@ export function HeroCard1() {
         {/* Liste des tâches */}
         <ul>
           {tasks.map((task) => (
-            <li key={task.label} className="flex items-center p-3 gap-2 border-b border-gray-light last:border-0">
+            <li key={task.label} className="flex items-center p-3 gap-2 border-b border-border last:border-0">
               <Checkbox state={task.state} />
               <span className={task.state === "done" ? "text-xs font-semibold text-gray line-through" : "text-xs font-medium text-dark"}>
                 {task.label}

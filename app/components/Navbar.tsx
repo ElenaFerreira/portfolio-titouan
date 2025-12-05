@@ -8,7 +8,7 @@ import { Download } from "lucide-react";
 export function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-60 flex justify-center px-4">
-      <nav className="mt-4 flex h-16 w-full max-w-4xl items-center justify-between rounded-full bg-white/95 px-3 border border-gray-light">
+      <nav className="mt-4 flex h-16 w-full max-w-4xl items-center justify-between rounded-full bg-white/95 px-3 border border-border">
         {/* Bloc gauche : avatar + nom */}
         <div className="flex items-center gap-3">
           <div className="relative h-10 w-10 overflow-hidden rounded-full">

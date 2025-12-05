@@ -54,7 +54,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="h-px bg-gray-light my-8" />
+        <div className="h-px bg-border my-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray">
           <p>©2025 Titouan F. Tous droits réservés</p>

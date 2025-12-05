@@ -74,7 +74,7 @@ export function Jobs() {
                 <div className="absolute left-0 top-6 size-4 rounded-full bg-primary border-3 border-white shadow-md" />
 
                 {/* Carte d'expérience */}
-                <div className="bg-white rounded-2xl p-6 border border-gray-light">
+                <div className="bg-white rounded-2xl p-6 border border-border">
                   {/* En-tête avec logo, titre, compagnie et date */}
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 pb-4">
                     {/* Contenu gauche */}
@@ -100,7 +100,7 @@ export function Jobs() {
                   </div>
 
                   {/* Bordure de séparation */}
-                  <div className="border-t border-gray-light"></div>
+                  <div className="border-t border-border"></div>
 
                   {/* Description */}
                   <div className="pt-4">

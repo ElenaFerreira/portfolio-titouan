@@ -27,7 +27,7 @@ export function HeroCenter() {
       </div>
 
       {/* Pill confiance */}
-      <div className="flex items-center gap-4 rounded-full border border-gray-light bg-white p-2">
+      <div className="flex items-center gap-4 rounded-full border border-border bg-white p-2">
         {/* Avatars + texte */}
         <div className="flex items-center gap-3">
           <div className="flex -space-x-2">

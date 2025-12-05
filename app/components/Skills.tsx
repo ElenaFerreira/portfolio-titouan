@@ -99,7 +99,7 @@ export function Skills() {
 
       {/* Séparateur */}
       <div className="w-full max-w-[600px] mx-auto mt-8">
-        <div className="border-t border-gray-light"></div>
+        <div className="border-t border-border"></div>
       </div>
 
       {/* Compétences UX */}
@@ -113,7 +113,7 @@ export function Skills() {
 
       {/* Séparateur */}
       <div className="w-full max-w-[600px] mx-auto mt-8">
-        <div className="border-t border-gray-light"></div>
+        <div className="border-t border-border"></div>
       </div>
 
       {/* Soft skills */}

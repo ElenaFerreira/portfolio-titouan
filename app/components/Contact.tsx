@@ -56,9 +56,9 @@ export function Contact() {
                   <CardWrapper
                     key={index}
                     {...cardProps}
-                    className="group flex items-center gap-4 p-4 bg-white border border-gray-light rounded-xl cursor-pointer"
+                    className="group flex items-center gap-4 p-4 bg-white border border-border rounded-xl cursor-pointer"
                   >
-                    <div className="flex items-center justify-center size-12 rounded-lg border border-gray-light">
+                    <div className="flex items-center justify-center size-12 rounded-lg border border-border">
                       <card.icon className="size-5 text-dark" />
                     </div>
                     <div className="flex-1">
@@ -74,7 +74,7 @@ export function Contact() {
 
           {/* Partie droite - Formulaire */}
           <div className="flex-1">
-            <div className="bg-white border border-gray-light rounded-2xl p-6">
+            <div className="bg-white border border-border rounded-2xl p-6">
               <h3 className="text-lg font-semibold text-dark">Envoyez un message</h3>
               <p className="mt-1 text-sm text-gray">
                 Utilisez le formulaire de contact ci-dessous pour me faire part de vos questions ou de vos demandes.
@@ -84,17 +84,17 @@ export function Contact() {
                 <input
                   type="text"
                   placeholder="Votre nom"
-                  className="w-full px-4 py-3 border border-gray-light rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors"
                 />
                 <input
                   type="email"
                   placeholder="Votre email"
-                  className="w-full px-4 py-3 border border-gray-light rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors"
                 />
                 <textarea
                   placeholder="Votre message"
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-light rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors resize-none"
                 />
                 <button
                   type="button"

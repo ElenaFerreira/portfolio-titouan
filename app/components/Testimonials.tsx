@@ -83,7 +83,7 @@ export function Testimonials() {
           <div className="flex flex-col gap-2">
             <div className="relative pl-6">
               {/* Barre grise de fond */}
-              <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gray-light rounded-full" />
+              <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-border rounded-full" />
 
               {/* Barre bleue animée */}
               <div

@@ -130,7 +130,7 @@ export function ProjectCard({
         role="button"
         tabIndex={0}
         aria-pressed={isOpen}
-        className="group flex size-[324px] flex-col overflow-hidden rounded-3xl border border-gray-light bg-white p-2 text-left outline-none transition focus-visible:ring-2 focus-visible:ring-primary"
+        className="group flex size-[324px] flex-col overflow-hidden rounded-3xl border border-border bg-white p-2 text-left outline-none transition focus-visible:ring-2 focus-visible:ring-primary"
         onClick={openModal}
         onKeyDown={handleKeyPress}
       >
@@ -150,7 +150,7 @@ export function ProjectCard({
             <p className="text-sm font-medium text-gray">{subtitle}</p>
           </div>
 
-          <div className="mt-3 flex items-center justify-between border-t border-gray-light pt-3">
+          <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
             <div className="flex items-center gap-2">
               {isGroup ? (
                 <div className="flex -space-x-2">
@@ -165,7 +165,7 @@ export function ProjectCard({
               <span className="text-md font-semibold text-dark">{isGroup ? "Groupe" : "Titouan"}</span>
             </div>
 
-            <span className="rounded-full border border-gray-light bg-gray-lighter px-3 py-1 text-sm font-semibold text-dark">{dateLabel}</span>
+            <span className="rounded-full border border-border bg-gray-lighter px-3 py-1 text-sm font-semibold text-dark">{dateLabel}</span>
           </div>
         </div>
       </article>
