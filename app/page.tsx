@@ -4,6 +4,7 @@ import { Project } from "./components/project/Project";
 import { Global } from "./components/Global";
 import { About } from "./components/About";
 import { Jobs } from "./components/Jobs";
+import { Skills } from "./components/Skills";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Global />
       <About />
       <Jobs />
+      <Skills />
     </main>
   );
 }
