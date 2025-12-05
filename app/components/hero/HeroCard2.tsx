@@ -26,7 +26,7 @@ export function HeroCard2() {
         <div className="space-y-3">
           {progresses.map((item, index) => (
             <div key={index} className="flex items-center gap-3">
-              <p className="text-xs font-medium text-dark whitespace-nowrap">{item.label}</p>
+              <p className="w-20 text-xs font-medium text-dark whitespace-nowrap">{item.label}</p>
 
               <div className="flex-1 h-1.5 overflow-hidden rounded-full bg-gray-lighter">
                 <div className="h-full rounded-full bg-primary" style={{ width: `${item.value}%` }} />

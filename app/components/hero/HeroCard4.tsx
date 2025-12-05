@@ -21,7 +21,7 @@ export function HeroCard4() {
             <LayoutTemplate className="h-4 w-4 text-primary" />
           </div>
 
-          <span className="text-lg font-bold text-primary opacity-70">01</span>
+          <span className="text-2xl font-extrabold text-primary opacity-25">01</span>
         </div>
 
         {/* Texte */}

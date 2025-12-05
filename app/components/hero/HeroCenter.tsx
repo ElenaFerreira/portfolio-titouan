@@ -62,7 +62,12 @@ export function HeroCenter() {
       </p>
 
       {/* CTA principal */}
-      <button className="cursor-pointer rounded-xl bg-primary px-8 py-3 text-xl text-white transition hover:brightness-110">Découvrir</button>
+      <a
+        href="#projects"
+        className="cursor-pointer rounded-xl bg-primary px-8 py-3 text-xl text-white transition hover:brightness-110 animation-pulser-discover"
+      >
+        Découvrir
+      </a>
 
       {/* Slider de logos */}
       <div className="mt-8 w-full max-w-140 mx-auto">

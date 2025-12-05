@@ -1,6 +1,6 @@
 "use client";
 
-import { CircleUserRound, CalendarDays } from "lucide-react";
+import { Briefcase, CalendarDays } from "lucide-react";
 import Image from "next/image";
 import { SectionTag } from "./ui/SectionTag";
 
@@ -48,7 +48,7 @@ export function Jobs() {
     <section id="jobs" className="flex flex-col items-center px-4 py-16 bg-gray-lighter">
       <div className="text-left w-full max-w-[1040px] mx-auto">
         {/* Tag */}
-        <SectionTag icon={CircleUserRound} label="À propos" variant="white" />
+        <SectionTag icon={Briefcase} label="À propos" variant="white" />
 
         {/* Titre */}
         <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Mon parcours</h2>

@@ -99,8 +99,8 @@ export function Testimonials() {
                   <button
                     key={person.id}
                     onClick={() => setActiveId(person.id)}
-                    className={`flex items-center gap-4 text-left transition-all duration-300 p-2 rounded-lg ${
-                      activeId === person.id ? "opacity-100" : "opacity-50 hover:opacity-75"
+                    className={`flex items-center gap-4 text-left transition-all duration-300 p-2 rounded-lg hover:-translate-y-1 ${
+                      activeId === person.id ? "opacity-100" : "opacity-50 hover:opacity-100"
                     }`}
                   >
                     <div

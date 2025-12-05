@@ -1,6 +1,6 @@
 "use client";
 
-import { Star } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import Image from "next/image";
 
 const tasks = [
@@ -32,7 +32,7 @@ export function HeroCard1() {
         <ul>
           {tasks.map((task) => (
             <li key={task.label} className="flex items-center p-3 gap-2 border-b border-gray-light last:border-0">
-              <RadioBullet state={task.state} />
+              <Checkbox state={task.state} />
               <span className={task.state === "done" ? "text-xs font-semibold text-gray line-through" : "text-xs font-medium text-dark"}>
                 {task.label}
               </span>
@@ -44,15 +44,15 @@ export function HeroCard1() {
   );
 }
 
-type BulletState = "default" | "done";
+type CheckboxState = "default" | "done";
 
-function RadioBullet({ state }: { state: BulletState }) {
+function Checkbox({ state }: { state: CheckboxState }) {
   if (state === "done") {
     return (
-      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border-[1.5px] border-primary">
-        <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+      <span className="inline-flex h-4 w-4 items-center justify-center rounded bg-primary">
+        <Check className="h-3 w-3 text-white" strokeWidth={3} />
       </span>
     );
   }
-  return <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-gray-light bg-transparent" />;
+  return <span className="inline-flex h-4 w-4 items-center justify-center rounded border border-gray bg-transparent" />;
 }
