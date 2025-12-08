@@ -96,7 +96,7 @@ export function Jobs() {
                     </div>
 
                     {/* Date à droite */}
-                    <IconTag label={experience.period} icon={<CalendarDays className="size-4" />} className="shrink-0 md:mt-1" />
+                    <IconTag label={experience.period} icon={<CalendarDays className="size-4" />} className="shrink-0 w-fit md:mt-1" />
                   </div>
 
                   {/* Bordure de séparation */}

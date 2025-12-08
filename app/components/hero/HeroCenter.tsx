@@ -84,7 +84,7 @@ export function HeroCenter() {
             }}
           >
             {tools.map((tool, i) => (
-              <div key={i} className="mx-10 flex items-center justify-center">
+              <div key={i} className="mx-6 md:mx-10 flex items-center justify-center">
                 <Image src={tool.src} alt={tool.name} width={38} height={38} className="object-contain shrink-0" />
               </div>
             ))}
