@@ -11,10 +11,10 @@ export function About() {
       <div className="w-full max-w-[1040px] mx-auto mt-8">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
           {/* Image de profil */}
-          <div className="w-1/2">
-            <div className="relative w-full h-full">
+          <div className="w-full md:w-1/2">
+            <div className="relative w-full h-80 md:h-full">
               {/* Scotch en haut à gauche */}
-              <Image src="/images/scotch.png" alt="" width={300} height={300} className="absolute -top-2 -left-2 z-10 size-10" />
+              <Image src="/images/scotch.png" alt="" width={300} height={300} className="absolute -top-2 -left-2 z-10 size-10 hidden md:block" />
 
               {/* Photo de profil */}
               <div className="relative w-full h-full overflow-hidden rounded-3xl">
@@ -30,12 +30,18 @@ export function About() {
               </div>
 
               {/* Scotch en bas à droite */}
-              <Image src="/images/scotch.png" alt="" width={300} height={300} className="absolute -bottom-2 -right-2 z-10 rotate-150 size-10" />
+              <Image
+                src="/images/scotch.png"
+                alt=""
+                width={300}
+                height={300}
+                className="absolute -bottom-2 -right-2 z-10 rotate-150 size-10 hidden md:block"
+              />
             </div>
           </div>
 
           {/* Contenu texte */}
-          <div className="w-1/2 flex flex-col gap-6 text-left">
+          <div className="w-full md:w-1/2 flex flex-col gap-6 text-left">
             <div className="text-left">
               {/* Tag */}
               <SectionTag icon={CircleUserRound} label="À propos" variant="light" />
@@ -69,14 +75,14 @@ export function About() {
 
             {/* Points clés avec checkmarks */}
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <div className="flex items-center gap-3 rounded-full border border-border p-1 pr-2">
+              <div className="flex w-fit items-center gap-3 rounded-full border border-border p-1 pr-2">
                 <div className="flex size-6 items-center justify-center rounded-full bg-primary">
                   <Check className="size-4 text-white" strokeWidth={3} />
                 </div>
                 <span className="text-sm font-medium text-dark">Basé dans l'Oise</span>
               </div>
 
-              <div className="flex items-center gap-3 rounded-full border border-border p-1 pr-2">
+              <div className="flex w-fit items-center gap-3 rounded-full border border-border p-1 pr-2">
                 <div className="flex size-6 items-center justify-center rounded-full bg-primary">
                   <Check className="size-4 text-white" strokeWidth={3} />
                 </div>
