@@ -134,7 +134,7 @@ export function ProjectCard({
         onClick={openModal}
         onKeyDown={handleKeyPress}
       >
-        <div className="relative flex h-[190px] w-full flex-col items-center justify-end rounded-2xl" style={gradientStyle}>
+        <div className="relative flex h-[190px] w-full flex-col items-center justify-end overflow-hidden rounded-2xl" style={gradientStyle}>
           <div className="transition-transform duration-300 group-hover:scale-105">
             <div className="mt-3 text-sm font-semibold uppercase text-white text-center">{brandLabel}</div>
 
@@ -165,7 +165,7 @@ export function ProjectCard({
               <span className="text-md font-semibold text-dark">{isGroup ? "Groupe" : "Titouan"}</span>
             </div>
 
-            <span className="rounded-full border border-border bg-gray-lighter px-3 py-1 text-sm font-semibold text-dark">{dateLabel}</span>
+            <span className="rounded-full border border-border bg-gray-lighter px-3 py-1 text-sm text-gray">{dateLabel}</span>
           </div>
         </div>
       </article>
