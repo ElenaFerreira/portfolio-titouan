@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MusicPlayer } from "./components/MusicPlayer";
 
 export const metadata: Metadata = {
   title: "Portfolio – Titouan",
@@ -17,7 +18,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-title" content="Titouan - Portfolio" />
         <link rel="manifest" href="/images/favicon/site.webmanifest" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <MusicPlayer />
+      </body>
     </html>
   );
 }
