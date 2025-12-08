@@ -15,6 +15,8 @@
   --color-gray: var(--gray);
   --color-border: var(--border);
   --color-gray-lighter: var(--gray-lighter);
+
+  --color-validation: var(--validation);
 }
 @layer utilities {
   :root {
@@ -32,6 +34,8 @@
     --gray: #7e7e7e;
     --border: #e6e9ee;
     --gray-lighter: #f7f7f7;
+
+    --validation: #11c800;
   }
 }
 

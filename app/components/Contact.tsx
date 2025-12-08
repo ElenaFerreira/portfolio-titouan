@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AtSign, Mail, Linkedin, MapPin, ArrowRight, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { AtSign, Mail, Linkedin, MapPin, ArrowRight, Send, Check, AlertCircle, Loader2 } from "lucide-react";
 import { SectionTag } from "./ui/SectionTag";
 
 interface ContactCard {
@@ -20,7 +20,7 @@ const contactCards: ContactCard[] = [
   },
   {
     icon: Linkedin,
-    label: "Contactez moi sur Linkedin",
+    label: "Contactez moi sur LinkedIn",
     value: "Titouan François",
     href: "https://www.linkedin.com/in/titouan-fran%C3%A7ois-004724226/",
   },
@@ -162,31 +162,31 @@ export function Contact() {
                   className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray transition-colors resize-y min-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
 
-                {/* Message de succès */}
-                {status === "success" && (
-                  <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                    <CheckCircle className="size-5 shrink-0" />
-                    <p className="text-sm font-medium">Message envoyé avec succès !</p>
-                  </div>
-                )}
-
-                {/* Message d'erreur */}
-                {status === "error" && (
-                  <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                    <AlertCircle className="size-5 shrink-0" />
-                    <p className="text-sm font-medium">{errorMessage}</p>
-                  </div>
-                )}
-
                 <button
                   type="submit"
-                  disabled={status === "loading"}
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                  disabled={status === "loading" || status === "success"}
+                  className={`flex items-center justify-center gap-2 w-full py-3 font-semibold rounded-lg transition-colors disabled:cursor-not-allowed ${
+                    status === "success"
+                      ? "bg-validation text-white"
+                      : status === "error"
+                      ? "bg-red-500 text-white hover:bg-red-600"
+                      : "bg-primary text-white hover:bg-primary/90 disabled:opacity-70"
+                  }`}
                 >
                   {status === "loading" ? (
                     <>
                       <Loader2 className="size-4 animate-spin" />
                       Envoi en cours...
+                    </>
+                  ) : status === "success" ? (
+                    <>
+                      <Check className="size-4" />
+                      Message envoyé !
+                    </>
+                  ) : status === "error" ? (
+                    <>
+                      <AlertCircle className="size-4" />
+                      Erreur - Réessayer
                     </>
                   ) : (
                     <>

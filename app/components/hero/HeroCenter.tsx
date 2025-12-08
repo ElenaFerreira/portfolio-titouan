@@ -21,24 +21,23 @@ const tools = [
 export function HeroCenter() {
   return (
     <div className="z-50 flex flex-col items-center gap-8 pb-16 pt-15 text-center">
-      {/* Logo carré bleu */}
-      <div className="flex size-14 items-center justify-center rounded-xl bg-primary">
+      {/* Logo */}
+      <div className="flex size-16 items-center justify-center rounded-xl bg-primary">
         <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />
       </div>
 
-      {/* Pill confiance */}
       <div className="flex items-center gap-4 rounded-full border border-border bg-white p-2">
         {/* Avatars + texte */}
         <div className="flex items-center gap-3">
           <div className="flex -space-x-2">
-            <Avatar src="/images/coworkers/tristan-habert.jpeg" alt="Client 1" />
-            <Avatar src="/images/coworkers/noémie-saintemarie.jpg" alt="Client 2" />
-            <Avatar src="/images/coworkers/alison-rico.jpg" alt="Client 3" />
+            <Avatar src="/images/coworkers/tristan-habert.jpeg" alt="Coworker 1" />
+            <Avatar src="/images/coworkers/noemie-saintemarie.jpg" alt="Coworker 2" />
+            <Avatar src="/images/coworkers/alison-rico.jpg" alt="Coworker 3" />
           </div>
           <p className="text-xs font-semibold text-gray-dark">Ils me font confiance</p>
         </div>
 
-        {/* Bouton Me contacter */}
+        {/* Me contacter */}
         <a
           href="#contact"
           className="flex cursor-pointer items-center gap-1 rounded-full bg-blue-light px-4 py-1.5 text-xs font-semibold text-primary shadow-md"
