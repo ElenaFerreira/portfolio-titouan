@@ -111,7 +111,7 @@ export function Project() {
                   soloAvatarSrc={project.soloAvatarSrc}
                   groupAvatars={project.groupAvatars}
                   description={project.description}
-                  designTitle={project.designTitle}
+                  designTitle={activeFilter === "video" ? "Montage" : "Design"}
                   designText={project.designText}
                   designHighlights={project.designHighlights}
                   tools={project.tools}

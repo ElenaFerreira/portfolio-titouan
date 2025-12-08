@@ -7,6 +7,7 @@
     "title": "Site d'entreprise WapyCloud",
     "subtitle": "Design & Prototypage",
     "dateLabel": "Juin 2025",
+    "isGroup": false,
     "bgFrom": "#FF840A",
     "bgTo": "#FFD4A9",
     "description": "Wapycloud est une plateforme SaaS clé en main qui permet aux particuliers et entreprises de commander un site web designé à la main et développé sur mesure.",
@@ -17,7 +18,7 @@
       { "name": "Dribbble", "iconSrc": "/images/tools/dribbble.svg" },
       { "name": "ChatGPT", "iconSrc": "/images/tools/openai.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "."
   },
   {
     "categories": ["uiux"],
@@ -27,6 +28,7 @@
     "title": "Site d'anglais Babel Master",
     "subtitle": "Design & Intégration",
     "dateLabel": "Mai 2025",
+    "isGroup": false,
     "bgFrom": "#F73859",
     "bgTo": "#FFCFD7",
     "description": "Babel Masters est un site dédié aux particuliers souhaitant prendre des cours d'anglais à Nanterre, en visio ou en présentiel, avec des professeurs qualifiés.",
@@ -38,7 +40,7 @@
       { "name": "ChatGPT", "iconSrc": "/images/tools/openai.svg" },
       { "name": "Wordpress", "iconSrc": "/images/tools/wordpress.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://dxpi03.webynov.com/"
   },
   {
     "categories": ["uiux"],
@@ -49,9 +51,9 @@
     "subtitle": "Design & Prototypage & Intégration",
     "dateLabel": "Mai 2025",
     "isGroup": true,
+    "groupAvatars": ["/images/coworkers/ambre-lardry.jpg", "/images/coworkers/antoine-nouet.jpg", "/images/profile.png"],
     "bgFrom": "#295700",
     "bgTo": "#BEEE62",
-    "groupAvatars": ["/images/client1.jpeg", "/images/client2.jpeg", "/images/profile.png"],
     "description": "Le site André Malraux est un site en ligne destinée à présenter le parc, ses actualités, ses évènements ainsi que les informations essentielles pour ses visiteurs.",
     "designText": "Le design a été repensé pour offrir une interface plus moderne et cohérente avec l'identité naturelle du parc. La palette présente des couleurs douces et végétales inspirés du lieux. Le site est structuré de manière intuitive afin de permettre aux utilisateurs de trouver rapidement l'information recherchée, avec un minimum d'efforts et de navigation.",
     "designHighlights": ["moderne", "cohérente", "douces", "végétales", "intuitive", "navigation"],
@@ -61,7 +63,7 @@
       { "name": "ChatGPT ", "iconSrc": "/images/tools/openai.svg" },
       { "name": "Wordpress ", "iconSrc": "/images/tools/wordpress.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "."
   },
   {
     "categories": ["uiux", "web"],
@@ -71,6 +73,7 @@
     "title": "Site de jumeaux numérique",
     "subtitle": "Design & Intégration",
     "dateLabel": "Juin 2023",
+    "isGroup": false,
     "bgFrom": "#EE1729",
     "bgTo": "#190101",
     "description": "uGetWin est une start-up française qui fournit des solutions de jumeau numérique et de contrôle de foule en temps réel pour aider les entreprises à améliorer leur sécurité.",
@@ -83,7 +86,7 @@
       { "name": "CSS ", "iconSrc": "/images/tools/css.svg" },
       { "name": "JS ", "iconSrc": "/images/tools/javascript.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://www.ugetwin.com/"
   },
   {
     "categories": ["uiux"],
@@ -93,6 +96,7 @@
     "title": "Site de gestion de cours",
     "subtitle": "Design",
     "dateLabel": "Janvier 2023",
+    "isGroup": false,
     "bgFrom": "#4AB2DB",
     "bgTo": "#161616",
     "description": "OTK Cours est une maquette d'une plateforme en ligne qui avait pour but d'aider à la gestion des cours entre un professeur et ses élèves.",
@@ -102,7 +106,7 @@
       { "name": "Figma", "iconSrc": "/images/tools/figma.svg" },
       { "name": "Dribble ", "iconSrc": "/images/tools/dribbble.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "."
   },
   {
     "categories": ["web"],
@@ -112,6 +116,8 @@
     "title": "Jeu du cookie clicker",
     "subtitle": "Développement web",
     "dateLabel": "Décembre 2023",
+    "isGroup": true,
+    "groupAvatars": ["/images/coworkers/feryel-khelifi.jpeg", "/images/coworkers/malou-binard.jpeg", "/images/profile.png"],
     "bgFrom": "#4AB2DB",
     "bgTo": "#161616",
     "description": "Super Mario Clicker est un cookie clicker inspiré de l'univers de Super Mario dont le but est de récolter le plus de pièce possible en cliquant sur le personnage principal.",
@@ -125,9 +131,7 @@
       { "name": "CSS ", "iconSrc": "/images/tools/css.svg" },
       { "name": "JS ", "iconSrc": "/images/tools/javascript.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com",
-    "isGroup": true,
-    "groupAvatars": ["/images/client1.jpeg", "/images/client2.jpeg", "/images/profile.png"]
+    "projectUrl": "https://titouanfrancois.alwaysdata.net/Projets/clicker/index.html"
   },
   {
     "categories": ["web"],
@@ -137,6 +141,7 @@
     "title": "Salon de coiffure",
     "subtitle": "Développement web",
     "dateLabel": "Novembre 2023",
+    "isGroup": false,
     "bgFrom": "#CA9803",
     "bgTo": "#F6F6F6",
     "description": "Bubble Waves est un site pour un salon de coiffure au thème «zen», permettant de découvrir les coupes proposées, d'obtenir des informations sur le salon et de le contacter facilement.",
@@ -148,7 +153,7 @@
       { "name": "CSS ", "iconSrc": "/images/tools/css.svg" },
       { "name": "JS ", "iconSrc": "/images/tools/javascript.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://titouanfrancois.alwaysdata.net/Projets/Site/Accueil.php"
   },
   {
     "categories": ["video"],
@@ -158,13 +163,14 @@
     "title": "Trailer de Poképark",
     "subtitle": "Montage vidéo",
     "dateLabel": "Mai 2025",
+    "isGroup": false,
     "bgFrom": "#295700",
     "bgTo": "#BEEE62",
     "description": "Ce trailer de Pokémon vise à recréer une véritable bande-annonce du jeu, en soignant chaque détail grâce à un montage dynamique et une musique immersive.",
     "designText": "Le montage alterne séquences rythmées et transitions fluides pour construire une narration dynamique, tout en mettant l'accent sur le gameplay du jeu. La synchronisation avec la musique et les effets visuels renforce l'immersion et donne au trailer la sensation d'une véritable bande-annonce.",
     "designHighlights": ["rythmées", "fluides", "musique", "effets visuels"],
     "tools": [{ "name": "Première Pro", "iconSrc": "/images/tools/Adobe_Premiere_Pro.svg" }],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://www.youtube.com/watch?v=1cEmiVf6F-0&feature=youtu.be"
   },
   {
     "categories": ["video"],
@@ -174,6 +180,7 @@
     "title": "Trailer de Super Mario Gravity",
     "subtitle": "Montage vidéo",
     "dateLabel": "Février 2022",
+    "isGroup": false,
     "bgFrom": "#091A46",
     "bgTo": "#161616",
     "description": "Ce trailer est une bande-annonce du jeu Super Mario Gravity, un fan-made du jeu Super Mario Galaxie. Le montage met en valeur l'action et les différentes galaxies du jeu.",
@@ -183,7 +190,7 @@
       { "name": "Première Pro", "iconSrc": "/images/tools/Adobe_Premiere_Pro.svg" },
       { "name": "After Effect", "iconSrc": "/images/tools/after-effect.svg" }
     ],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://www.youtube.com/watch?v=Wi3fTLraj5s"
   },
   {
     "categories": ["video"],
@@ -193,13 +200,14 @@
     "title": "Trailer de Food Wars",
     "subtitle": "Montage vidéo",
     "dateLabel": "Octobre 2021",
+    "isGroup": false,
     "bgFrom": "#D24571",
     "bgTo": "#FFCFDE",
     "description": "Ce trailer de l'animé Food Wars met en avant le premier épisode de la série de cuisine japonaise. Il a pour but de susciter l'intérêt et d'inciter les spectateurs à découvrir la série.",
     "designText": "Le montage alterne des scènes marquantes de l'épisode avec des scène plus narrative, rythmé par une musique dynamique et entrainante. Les transitions fluides et les moments clés de l'animé maintiennent l'attention et incitent le spectateur à en découvrir plus sur l'animé.",
     "designHighlights": ["marquantes", "narrative", "dynamique", "entrainante", "fluides", "l'attention"],
     "tools": [{ "name": "Première Pro", "iconSrc": "/images/tools/Adobe_Premiere_Pro.svg" }],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://www.youtube.com/watch?v=QQApkiNhXxg&feature=youtu.be"
   },
   {
     "categories": ["video"],
@@ -209,12 +217,13 @@
     "title": "Doublage de Inazuma Eleven",
     "subtitle": "Montage vidéo",
     "dateLabel": "Octobre 2021",
+    "isGroup": false,
     "bgFrom": "#DD613F",
     "bgTo": "#FFCFDE",
     "description": "Dans le cadre du cours, mon équipe et moi avons doublé un épisode de l'animé Inazuma Eleven. Nous avons réalisé le montage et rédigé l'ensemble des textes de doublage.",
     "designText": "Le montage met en avant les moments les plus narratifs et emblématiques de l'épisode, en accentuant le rythme et les transitions pour guider le spectateur. Le doublage que nous avons réalisé transforme ces scènes, leur apportant une dimension humoristique et absurde qui réinvente le ton de l'épisode.",
     "designHighlights": ["narratifs", "emblématiques", "humoristique", "absurde"],
     "tools": [{ "name": "Première Pro", "iconSrc": "/images/tools/Adobe_Premiere_Pro.svg" }],
-    "projectUrl": "https://ton-lien-wapycloud.com"
+    "projectUrl": "https://www.youtube.com/watch?v=vUmUnzRtGGo&feature=youtu.be"
   }
 ]

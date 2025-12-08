@@ -25,7 +25,7 @@ type ProjectCardProps = {
 };
 
 const DEFAULT_SOLO_AVATAR = "/images/profile.png";
-const DEFAULT_GROUP_AVATARS = ["/images/client1.jpeg", "/images/client2.jpeg", "/images/client3.jpeg"];
+const DEFAULT_GROUP_AVATARS = ["/images/tristan-habert.jpeg", "/images/noémie-saintemarie.jpg", "/images/alison-rico.jpg"];
 
 function highlightText(text: string, highlights: string[], color: string) {
   if (!highlights.length) return text;
