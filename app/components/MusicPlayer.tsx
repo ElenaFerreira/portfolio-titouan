@@ -17,7 +17,7 @@ const playlist: Track[] = [
     id: 1,
     title: "Sweden",
     artist: "C-418",
-    cover: "/images/music/Sweden.jpeg",
+    cover: "/images/music/sweden.jpeg",
     src: "/audio/Sweden.mp3",
   },
   {
