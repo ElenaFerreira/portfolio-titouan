@@ -78,7 +78,7 @@ export function Testimonials() {
         </div>
 
         {/* Contenu : liste des personnes + témoignage */}
-        <div className="mt-12 flex flex-col md:flex-row gap-40">
+        <div className="mt-12 flex flex-col md:flex-row gap-8 md:gap-40">
           {/* Liste des personnes à gauche */}
           <div className="flex flex-col gap-2">
             <div className="relative pl-6">

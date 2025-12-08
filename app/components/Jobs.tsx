@@ -47,7 +47,7 @@ const experiences: JobExperience[] = [
 export function Jobs() {
   return (
     <section id="jobs" className="flex flex-col items-center px-4 py-16 bg-gray-lighter">
-      <div className="text-left w-full max-w-[1040px] mx-auto">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left w-full max-w-[1040px] mx-auto">
         {/* Tag */}
         <SectionTag icon={Briefcase} label="Parcours" variant="white" />
 

@@ -87,7 +87,7 @@ export function Contact() {
       <div className="w-full max-w-[1040px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
           {/* Partie gauche */}
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
             <SectionTag icon={AtSign} label="Contact" />
 
             <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Rentrons en contact</h2>

@@ -56,7 +56,7 @@ export function Footer() {
 
         <div className="h-px bg-border my-8" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-gray">
           <p>©2025 Titouan F. Tous droits réservés</p>
 
           <Link href="#" className="hover:text-dark transition-colors">
