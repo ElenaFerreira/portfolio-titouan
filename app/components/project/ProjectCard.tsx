@@ -25,7 +25,7 @@ type ProjectCardProps = {
 };
 
 const DEFAULT_SOLO_AVATAR = "/images/profile.png";
-const DEFAULT_GROUP_AVATARS = ["/images/tristan-habert.jpeg", "/images/noémie-saintemarie.jpg", "/images/alison-rico.jpg"];
+const DEFAULT_GROUP_AVATARS = ["/images/client1.jpeg", "/images/client2.jpeg", "/images/client3.jpeg"];
 
 function highlightText(text: string, highlights: string[], color: string) {
   if (!highlights.length) return text;
@@ -130,7 +130,7 @@ export function ProjectCard({
         role="button"
         tabIndex={0}
         aria-pressed={isOpen}
-        className="group flex size-[324px] flex-col overflow-hidden rounded-3xl border border-border bg-white p-2 text-left outline-none transition focus-visible:ring-2 focus-visible:ring-primary"
+        className="group flex size-[324px] flex-col overflow-hidden rounded-3xl border border-border bg-white p-2 text-left transition cursor-pointer"
         onClick={openModal}
         onKeyDown={handleKeyPress}
       >
@@ -138,13 +138,13 @@ export function ProjectCard({
           <div className="transition-transform duration-300 group-hover:scale-105">
             <div className="mt-3 text-sm font-semibold uppercase text-white text-center">{brandLabel}</div>
 
-            <div className="relative mt-3 h-[130px] w-60 overflow-hidden rounded-t-xl bg-white">
-              <Image src={coverSrc} alt={coverAlt} fill className="object-cover" />
+            <div className="relative mt-3 h-[130px] w-60 overflow-hidden rounded-t-xl bg-white drop-shadow-xl drop-shadow-white">
+              <Image src={coverSrc} alt={coverAlt} fill className="object-cover object-top" />
             </div>
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col justify-between bg-white px-4 pb-4 pt-3 text-left text-dark">
+        <div className="flex flex-1 flex-col justify-between bg-white px-4 pb-2 pt-3 text-left text-dark">
           <div>
             <h3 className="text-md font-semibold text-dark">{title}</h3>
             <p className="text-sm font-medium text-gray">{subtitle}</p>
@@ -162,7 +162,7 @@ export function ProjectCard({
                 <Avatar src={soloAvatarSrc} alt="Titouan" />
               )}
 
-              <span className="text-md font-semibold text-dark">{isGroup ? "Groupe" : "Titouan"}</span>
+              <span className="text-md text-dark">{isGroup ? "Groupe" : "Titouan"}</span>
             </div>
 
             <span className="rounded-full border border-border bg-gray-lighter px-3 py-1 text-sm text-gray">{dateLabel}</span>

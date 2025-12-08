@@ -27,7 +27,7 @@ export function Footer() {
       <div className="w-full max-w-[1040px] mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex flex-col gap-4">
-            <div className="flex size-14 items-center justify-center rounded-2xl bg-primary">
+            <div className="flex size-14 items-center justify-center rounded-xl bg-primary">
               <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />
             </div>
             <p className="text-sm text-gray max-w-xs">

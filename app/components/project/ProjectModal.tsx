@@ -75,7 +75,7 @@ export function ProjectModal({
           </div>
 
           <div className="mt-8 rounded-3xl px-20 pt-16" style={gradientStyle}>
-            <div className="relative mx-auto h-[350px] max-w-[640px] overflow-hidden rounded-t-3xl bg-white">
+            <div className="relative mx-auto h-[350px] max-w-[640px] overflow-hidden rounded-t-3xl drop-shadow-xl drop-shadow-white">
               <Image src={coverSrc} alt={coverAlt} fill className="object-cover" />
             </div>
           </div>

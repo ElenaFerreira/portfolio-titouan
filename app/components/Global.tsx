@@ -32,7 +32,7 @@ export function Global() {
 
               {/* Contenu texte */}
               <div className="md:ml-6 flex flex-col gap-3">
-                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-md">
+                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-lg">
                   <Image className="size-7 text-white" src={"/images/tools/figma2.svg"} height={27} width={18} alt="figma" />
                 </div>
                 <h3 className="text-lg font-semibold text-dark">UX &amp; UI</h3>
@@ -49,7 +49,7 @@ export function Global() {
             <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left h-full border border-border">
               {/* Contenu texte */}
               <div className="flex flex-col gap-3">
-                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-md">
+                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-lg">
                   <Image className="size-7 text-white" src={"/images/tools/wordpress2.svg"} height={27} width={18} alt="figma" />
                 </div>
                 <h3 className="text-lg font-semibold text-dark">Développement Wordpress</h3>
@@ -70,7 +70,7 @@ export function Global() {
             <article className="flex flex-col overflow-hidden rounded-3xl bg-white p-6 text-left h-full border border-border">
               {/* Contenu texte */}
               <div className="flex flex-col gap-3">
-                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-md">
+                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-lg">
                   <Laptop2 className="size-7 text-white" fill="white" />
                 </div>
                 <h3 className="text-lg font-semibold text-dark">Expériences Web Interactives</h3>
@@ -93,7 +93,7 @@ export function Global() {
 
               {/* Contenu texte */}
               <div className="md:ml-6 flex flex-col gap-3">
-                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-md">
+                <div className="flex size-13 items-center justify-center rounded-full bg-primary shadow-gray shadow-lg">
                   <Paintbrush className="size-7 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-dark">Design &amp; Créativité</h3>
