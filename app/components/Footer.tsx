@@ -17,7 +17,7 @@ const socialLinks = [
   {
     name: "TikTok",
     href: "https://www.tiktok.com/@tickev?is_from_webapp=1&sender_device=pc",
-    image: "/images/social/Tiktok.svg",
+    image: "/images/social/TikTok.svg",
   },
 ];
 
