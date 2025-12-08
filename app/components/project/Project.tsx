@@ -58,23 +58,25 @@ export function Project() {
       </p>
 
       {/* Filtres */}
-      <div className="flex items-center mt-8 gap-3 rounded-full bg-gray-lighter p-2">
-        {FILTERS.map((filter) => {
-          const isActive = filter.id === activeFilter;
+      <div className="mt-8 max-w-full rounded-full bg-gray-lighter p-2 overflow-x-auto scrollbar-hide">
+        <div className="flex items-center gap-3 w-max">
+          {FILTERS.map((filter) => {
+            const isActive = filter.id === activeFilter;
 
-          return (
-            <button
-              key={filter.id}
-              type="button"
-              onClick={() => setActiveFilter(filter.id)}
-              className={`rounded-full px-4 py-2 text-md font-semibold transition ${
-                isActive ? "bg-dark text-white" : "bg-white text-dark hover:bg-white/70"
-              }`}
-            >
-              {filter.label}
-            </button>
-          );
-        })}
+            return (
+              <button
+                key={filter.id}
+                type="button"
+                onClick={() => setActiveFilter(filter.id)}
+                className={`rounded-full px-4 py-2 text-md font-semibold transition whitespace-nowrap ${
+                  isActive ? "bg-dark text-white" : "bg-white text-dark hover:bg-white/70"
+                }`}
+              >
+                {filter.label}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className="mt-10 flex flex-wrap justify-center gap-8 max-w-[1040px] min-h-[680px] mx-auto">

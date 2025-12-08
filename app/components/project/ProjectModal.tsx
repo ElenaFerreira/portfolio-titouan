@@ -67,16 +67,19 @@ export function ProjectModal({
             <X className="size-8" />
           </button>
 
-          <div className="text-left">
+          <div className="text-left pr-10">
             <h2 id="project-modal-title" className="text-2xl font-bold text-dark">
               {title}
             </h2>
             <p className="text-md font-medium text-gray">{description}</p>
           </div>
 
-          <div className="mt-8 rounded-3xl px-20 pt-16" style={gradientStyle}>
-            <div className="relative mx-auto h-[350px] max-w-[640px] overflow-hidden rounded-t-3xl drop-shadow-xl drop-shadow-white">
-              <Image src={coverSrc} alt={coverAlt} fill className="object-cover" />
+          <div
+            className="mt-8 flex flex-col items-center justify-end rounded-2xl md:rounded-3xl h-[190px] md:h-auto md:px-20 md:pt-16"
+            style={gradientStyle}
+          >
+            <div className="relative mt-3 md:mt-0 h-[150px] w-60 md:h-[350px] md:w-full md:max-w-[640px] overflow-hidden rounded-t-xl md:rounded-t-3xl drop-shadow-xl drop-shadow-white">
+              <Image src={coverSrc} alt={coverAlt} fill className="object-cover object-top" />
             </div>
           </div>
 
