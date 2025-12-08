@@ -39,10 +39,13 @@ export function HeroCenter() {
         </div>
 
         {/* Bouton Me contacter */}
-        <button className="flex cursor-pointer items-center gap-1 rounded-full bg-blue-light px-4 py-1.5 text-xs font-semibold text-primary shadow-md">
+        <a
+          href="#contact"
+          className="flex cursor-pointer items-center gap-1 rounded-full bg-blue-light px-4 py-1.5 text-xs font-semibold text-primary shadow-md"
+        >
           Me contacter
           <ArrowRight className="size-3.5" />
-        </button>
+        </a>
       </div>
 
       {/* Titre principal */}

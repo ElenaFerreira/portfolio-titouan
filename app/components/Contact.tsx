@@ -139,7 +139,7 @@ export function Contact() {
                   placeholder="Votre nom"
                   required
                   disabled={status === "loading"}
-                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 />
                 <input
                   type="email"
@@ -149,7 +149,7 @@ export function Contact() {
                   placeholder="Votre email"
                   required
                   disabled={status === "loading"}
-                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 />
                 <textarea
                   name="message"
@@ -159,13 +159,13 @@ export function Contact() {
                   rows={4}
                   required
                   disabled={status === "loading"}
-                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray focus:outline-none focus:border-primary transition-colors resize-y min-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-border rounded-lg text-dark placeholder:text-gray transition-colors resize-y min-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
 
                 {/* Message de succès */}
                 {status === "success" && (
                   <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                    <CheckCircle className="size-5 flex-shrink-0" />
+                    <CheckCircle className="size-5 shrink-0" />
                     <p className="text-sm font-medium">Message envoyé avec succès !</p>
                   </div>
                 )}
@@ -173,7 +173,7 @@ export function Contact() {
                 {/* Message d'erreur */}
                 {status === "error" && (
                   <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">
-                    <AlertCircle className="size-5 flex-shrink-0" />
+                    <AlertCircle className="size-5 shrink-0" />
                     <p className="text-sm font-medium">{errorMessage}</p>
                   </div>
                 )}

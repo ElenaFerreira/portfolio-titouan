@@ -12,10 +12,14 @@ export function Navbar() {
         {/* Bloc gauche : avatar + nom */}
         <div className="flex items-center gap-3">
           <div className="relative h-10 w-10 overflow-hidden rounded-full">
-            <Image src="/images/profile.png" alt="Titouan François" fill className="object-cover" />
+            <a href="#">
+              <Image src="/images/profile.png" alt="Titouan François" fill className="object-cover" />
+            </a>
           </div>
 
-          <span className="font-bold">Titouan François</span>
+          <a href="#" className="font-bold">
+            Titouan François
+          </a>
         </div>
 
         {/* Liens centraux */}
