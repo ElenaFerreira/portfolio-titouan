@@ -97,7 +97,7 @@ export function Contact() {
             </p>
 
             {/* Cartes de contact */}
-            <div className="mt-8 flex flex-col gap-3">
+            <div className="mt-8 flex flex-col gap-3 w-full">
               {contactCards.map((card, index) => {
                 const CardWrapper = card.href ? "a" : "div";
                 const cardProps = card.href ? { href: card.href, target: "_blank", rel: "noopener noreferrer" } : {};
@@ -106,7 +106,7 @@ export function Contact() {
                   <CardWrapper
                     key={index}
                     {...cardProps}
-                    className="group flex items-center gap-4 p-4 bg-white border border-border rounded-xl cursor-pointer"
+                    className="group flex items-center gap-4 p-4 bg-white border border-border rounded-xl cursor-pointer text-left"
                   >
                     <div className="flex items-center justify-center size-12 rounded-lg border border-border">
                       <card.icon className="size-5 text-dark" />
