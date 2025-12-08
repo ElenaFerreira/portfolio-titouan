@@ -24,7 +24,7 @@ const playlist: Track[] = [
     id: 2,
     title: "Staff role",
     artist: "Nintendo",
-    cover: "/images/music/Staff_Credits.jpg",
+    cover: "/images/music/Staff_Credits.png",
     src: "/audio/Staff Credits.mp3",
   },
   {
