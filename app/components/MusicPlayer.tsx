@@ -145,7 +145,7 @@ export function MusicPlayer() {
 
   return (
     <div
-      className="fixed bottom-6 right-8 z-9999 flex min-h-[120px] min-w-[120px] items-center"
+      className="fixed bottom-6 right-8 z-9999 hidden md:flex min-h-[120px] min-w-[120px] items-center"
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >

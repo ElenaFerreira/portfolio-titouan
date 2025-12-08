@@ -20,7 +20,7 @@ const tools = [
 
 export function HeroCenter() {
   return (
-    <div className="z-50 flex flex-col items-center gap-8 pb-16 pt-15 text-center">
+    <div className="z-50 flex flex-col items-center gap-8 pt-15 text-center w-[calc(100vw-2rem)] md:w-auto">
       {/* Logo */}
       <div className="flex size-16 items-center justify-center rounded-xl bg-primary">
         <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />

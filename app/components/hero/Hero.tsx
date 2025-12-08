@@ -9,8 +9,7 @@ import { HeroCenter } from "./HeroCenter";
 export function Hero() {
   return (
     <section className="relative flex h-screen min-w-full items-center justify-center overflow-hidden pt-20">
-      <Image src="/images/background.svg" alt="" fill priority className="pointer-events-none -z-10 object-contain md:object-cover" />
-
+      <Image src="/images/background.svg" alt="" fill priority className="pointer-events-none -z-10 object-cover" />
       <HeroCard1 />
       <HeroCard2 />
       <HeroCard3 />

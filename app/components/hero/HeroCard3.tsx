@@ -5,7 +5,7 @@ import { Paperclip } from "lucide-react";
 
 export function HeroCard3() {
   return (
-    <div className="absolute top-30 right-0 rotate-8 z-40">
+    <div className="absolute top-30 right-0 rotate-8 z-40 hidden lg:block">
       {/* Trombones */}
       <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-8 z-10">
         <div className="h-6 w-6 flex items-center justify-center -rotate-25">
