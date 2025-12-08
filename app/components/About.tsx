@@ -13,7 +13,15 @@ export function About() {
           {/* Image de profil */}
           <div className="w-1/2">
             <div className="relative w-full h-full overflow-hidden rounded-3xl">
-              <Image src="/images/profile2.png" alt="Photo de profil" fill className="object-cover" priority />
+              <Image
+                src="/images/profile2.png"
+                alt="Photo de profil"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
 

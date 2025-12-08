@@ -39,7 +39,7 @@ export function Navbar() {
 
         {/* Bouton CV */}
         <Link
-          href="/cv.pdf"
+          href="../images/cv_titouan_françois.pdf"
           download
           className="flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-white text-sm font-medium shadow-[0_2px_6px_rgba(0,0,0,0.2)] hover:brightness-105 transition"
         >
