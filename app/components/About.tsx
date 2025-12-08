@@ -12,16 +12,25 @@ export function About() {
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
           {/* Image de profil */}
           <div className="w-1/2">
-            <div className="relative w-full h-full overflow-hidden rounded-3xl">
-              <Image
-                src="/images/profile2.png"
-                alt="Photo de profil"
-                fill
-                className="object-cover"
-                priority
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+            <div className="relative w-full h-full">
+              {/* Scotch en haut à gauche */}
+              <Image src="/images/scotch.png" alt="" width={300} height={300} className="absolute -top-2 -left-2 z-10 size-10" />
+
+              {/* Photo de profil */}
+              <div className="relative w-full h-full overflow-hidden rounded-3xl">
+                <Image
+                  src="/images/profile2.png"
+                  alt="Photo de profil"
+                  fill
+                  className="object-cover scale-130 object-top"
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+
+              {/* Scotch en bas à droite */}
+              <Image src="/images/scotch.png" alt="" width={300} height={300} className="absolute -bottom-2 -right-2 z-10 rotate-150 size-10" />
             </div>
           </div>
 
