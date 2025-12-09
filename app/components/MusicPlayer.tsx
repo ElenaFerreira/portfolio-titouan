@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX } from "lucide-react";
+import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Volume1 } from "lucide-react";
 
 interface Track {
   id: number;
@@ -41,6 +41,9 @@ export function MusicPlayer() {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
+  const [volume, setVolume] = useState(0.7);
+  const [previousVolume, setPreviousVolume] = useState(0.7);
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [shouldAutoPlay, setShouldAutoPlay] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -126,11 +129,42 @@ export function MusicPlayer() {
     setProgress(0);
   };
 
+  // Synchroniser le volume avec l'audio
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = isMuted ? 0 : volume;
+    }
+  }, [volume, isMuted]);
+
   const toggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
+      if (isMuted) {
+        // Réactiver le son : restaurer le volume précédent
+        setVolume(previousVolume);
+        setIsMuted(false);
+      } else {
+        // Couper le son : sauvegarder le volume actuel
+        setPreviousVolume(volume);
+        setIsMuted(true);
+      }
     }
+  };
+
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    setPreviousVolume(newVolume);
+    if (newVolume === 0) {
+      setIsMuted(true);
+    } else if (isMuted) {
+      setIsMuted(false);
+    }
+  };
+
+  const getVolumeIcon = () => {
+    if (isMuted || volume === 0) return <VolumeX className="size-4 text-gray" />;
+    if (volume < 0.5) return <Volume1 className="size-4 text-gray" />;
+    return <Volume2 className="size-4 text-gray" />;
   };
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -163,8 +197,8 @@ export function MusicPlayer() {
 
       {/* Panneau infos et contrôles */}
       <div
-        className={`-ml-14 flex h-[110px] flex-col justify-center overflow-hidden rounded-2xl bg-white/95 shadow-lg backdrop-blur-md transition-all duration-300 ${
-          isExpanded ? "w-52 pl-16 pr-3 opacity-100" : "w-0 pl-0 pr-0 opacity-0"
+        className={`-ml-14 flex h-[110px] flex-col justify-center rounded-2xl bg-white/95 shadow-lg backdrop-blur-md transition-all duration-300 ${
+          isExpanded ? "w-52 pl-16 pr-3 opacity-100" : "w-0 pl-0 pr-0 opacity-0 overflow-hidden"
         }`}
       >
         {/* Titre + artiste + volume */}
@@ -173,13 +207,37 @@ export function MusicPlayer() {
             <p className="truncate text-sm font-semibold text-dark">{currentTrack.title}</p>
             <p className="truncate text-xs text-gray">{currentTrack.artist}</p>
           </div>
-          <button
-            onClick={toggleMute}
-            className="shrink-0 rounded-full p-1 transition-colors hover:bg-gray-lighter"
-            aria-label={isMuted ? "Activer le son" : "Couper le son"}
-          >
-            {isMuted ? <VolumeX className="size-4 text-gray" /> : <Volume2 className="size-4 text-gray" />}
-          </button>
+          {/* Bouton volume avec slider au hover */}
+          <div className="relative shrink-0" onMouseEnter={() => setShowVolumeSlider(true)} onMouseLeave={() => setShowVolumeSlider(false)}>
+            <button
+              onClick={toggleMute}
+              className="rounded-full p-1 transition-colors hover:bg-gray-lighter"
+              aria-label={isMuted ? "Activer le son" : "Couper le son"}
+            >
+              {getVolumeIcon()}
+            </button>
+            {/* Slider de volume */}
+            <div
+              className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-3 bg-white/95 rounded-xl shadow-lg backdrop-blur-md transition-all duration-200 z-50 ${
+                showVolumeSlider ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-1"
+              }`}
+            >
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value={isMuted ? 0 : volume}
+                onChange={handleVolumeChange}
+                className="volume-slider h-20 w-1.5 appearance-none rounded-full bg-gray-lighter cursor-pointer"
+                style={{
+                  writingMode: "vertical-lr",
+                  direction: "rtl",
+                }}
+                aria-label="Volume"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Barre de progression */}
