@@ -37,9 +37,9 @@ export function Navbar() {
   return (
     <>
       <GlassDistortionFilter />
-      <header className="fixed top-0 left-0 w-full z-60 flex justify-center px-4">
+      <header className="fixed top-0 left-0 w-full z-[60] flex flex-col items-center px-4">
         {/* Navbar avec effet Liquid Glass */}
-        <nav className="liquid-glass-wrapper mt-4 h-16 w-full max-w-4xl rounded-full shadow-[0_6px_16px_rgba(0,0,0,0.15),0_0_24px_rgba(0,0,0,0.08)]">
+        <nav className="liquid-glass-wrapper mt-4 h-16 w-full max-w-4xl rounded-full border border-border">
           {/* Layers de l'effet liquid glass */}
           <div className="liquid-glass-effect rounded-full" />
           <div className="liquid-glass-tint rounded-full" />
@@ -95,15 +95,10 @@ export function Navbar() {
             </button>
           </div>
         </nav>
-
-        {/* Menu Mobile avec effet Liquid Glass */}
+        {/* Menu Mobile - Simple blur */}
         {isMenuOpen && (
-          <div className="md:hidden fixed top-24 left-4 right-4 liquid-glass-wrapper rounded-2xl shadow-[0_6px_16px_rgba(0,0,0,0.15),0_0_24px_rgba(0,0,0,0.08)] animate-fade-in-up">
-            <div className="liquid-glass-effect rounded-2xl" />
-            <div className="liquid-glass-tint rounded-2xl" />
-            <div className="liquid-glass-shine rounded-2xl" />
-
-            <div className="liquid-glass-content p-6 w-full">
+          <div className="md:hidden mt-2 w-full max-w-4xl rounded-2xl border border-border backdrop-blur-xl bg-white/70 animate-fade-in-up">
+            <div className="p-6 w-full">
               <ul className="flex flex-col gap-4 text-dark mb-6">
                 <li>
                   <a href="#projects" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
