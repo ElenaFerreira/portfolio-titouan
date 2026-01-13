@@ -59,12 +59,12 @@ export function ProjectModal({
         <div className="relative max-h-[90vh] overflow-y-auto p-8">
           <button
             ref={closeButtonRef}
-            className="absolute right-5 top-5 inline-flex size-8 items-center justify-center rounded-full text-dark transition hover:bg-gray-lighter focus-visible:ring-2 focus-visible:ring-primary"
+            className="absolute right-5 top-5 inline-flex size-8 cursor-pointer items-center justify-center rounded-full text-dark focus-visible:ring-2 focus-visible:ring-primary"
             onClick={onClose}
             aria-label="Fermer"
             type="button"
           >
-            <X className="size-8" />
+            <X className="size-8 transition-transform duration-300 hover:rotate-90" />
           </button>
 
           <div className="text-left pr-10">

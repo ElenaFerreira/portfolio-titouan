@@ -131,6 +131,18 @@ body {
   font-family: var(--font-lato);
 }
 
+/* Cursor pointer on all interactive elements */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+select,
+summary {
+  cursor: pointer;
+}
+
 @keyframes logos-marquee {
   0% {
     transform: translateX(0);
