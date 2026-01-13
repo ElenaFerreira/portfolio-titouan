@@ -20,7 +20,7 @@ const tools = [
 
 export function HeroCenter() {
   return (
-    <div className="z-50 flex flex-col items-center gap-8 pt-15 text-center w-[calc(100vw-2rem)] md:w-auto">
+    <div className="z-50 flex flex-col items-center gap-6 pt-15 text-center w-[calc(100vw-2rem)] md:w-auto">
       {/* Logo */}
       <div className="flex size-16 items-center justify-center rounded-xl bg-primary">
         <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />
@@ -72,7 +72,7 @@ export function HeroCenter() {
       </a>
 
       {/* Slider de logos */}
-      <div className="mt-8 w-full max-w-140 mx-auto">
+      <div className="mt-6 w-full max-w-140 mx-auto">
         <p className="mb-6 text-sm font-semibold text-dark">Mes logiciels les plus utilisés</p>
 
         <div className="relative h-14 overflow-hidden">
