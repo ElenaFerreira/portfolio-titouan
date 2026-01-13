@@ -50,32 +50,32 @@ export function Navbar() {
             {/* Bloc gauche : avatar + nom */}
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                <a href="#">
+                <Link href="/">
                   <Image src="/images/profile.png" alt="Titouan François" fill className="object-cover" />
-                </a>
+                </Link>
               </div>
 
-              <a href="#" className="font-bold text-dark">
+              <Link href="/" className="font-bold text-dark">
                 Titouan François
-              </a>
+              </Link>
             </div>
 
             {/* Liens centraux - Desktop */}
             <ul className="hidden md:flex items-center gap-5 text-dark">
               <li>
-                <a href="#projects" className="hover:text-primary transition-colors">
+                <Link href="/#projects" className="hover:text-primary transition-colors">
                   Projets
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-primary transition-colors">
+                <Link href="/#about" className="hover:text-primary transition-colors">
                   À propos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#skills" className="hover:text-primary transition-colors">
+                <Link href="/#skills" className="hover:text-primary transition-colors">
                   Compétences
-                </a>
+                </Link>
               </li>
             </ul>
 
@@ -101,19 +101,19 @@ export function Navbar() {
             <div className="p-6 w-full">
               <ul className="flex flex-col gap-4 text-dark mb-6">
                 <li>
-                  <a href="#projects" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
+                  <Link href="/#projects" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
                     Projets
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#about" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
+                  <Link href="/#about" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
                     À propos
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#skills" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
+                  <Link href="/#skills" onClick={closeMenu} className="block py-2 font-medium hover:text-primary transition">
                     Compétences
-                  </a>
+                  </Link>
                 </li>
               </ul>
 

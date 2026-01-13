@@ -59,7 +59,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-gray">
           <p>©2025 Titouan F. Tous droits réservés</p>
 
-          <Link href="#" className="hover:text-dark transition-colors">
+          <Link href="/mentions-legales" className="hover:text-dark transition-colors">
             Mentions légales
           </Link>
 
