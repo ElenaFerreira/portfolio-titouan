@@ -22,7 +22,7 @@ const contactCards: ContactCard[] = [
     icon: Linkedin,
     label: "Contactez moi sur LinkedIn",
     value: "Titouan François",
-    href: "https://www.linkedin.com/in/titouan-fran%C3%A7ois-004724226/",
+    href: "https://www.linkedin.com/in/titouan-françois/",
   },
   {
     icon: MapPin,

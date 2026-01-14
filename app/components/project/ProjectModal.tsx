@@ -74,14 +74,28 @@ export function ProjectModal({
             <p className="text-md font-medium text-gray">{description}</p>
           </div>
 
-          <div
-            className="mt-8 flex flex-col items-center justify-end rounded-2xl md:rounded-3xl h-[190px] md:h-auto md:px-20 md:pt-16"
-            style={gradientStyle}
-          >
-            <div className="relative mt-3 md:mt-0 h-[150px] w-60 md:h-[350px] md:w-full md:max-w-[640px] overflow-hidden rounded-t-xl md:rounded-t-3xl drop-shadow-xl drop-shadow-white">
-              <Image src={coverSrc} alt={coverAlt} fill className="object-cover object-top" />
+          {projectUrl ? (
+            <a
+              href={projectUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 flex flex-col items-center justify-end rounded-2xl md:rounded-3xl h-[190px] md:h-auto md:px-20 md:pt-16 cursor-pointer transition-transform hover:scale-[1.02]"
+              style={gradientStyle}
+            >
+              <div className="relative mt-3 md:mt-0 h-[150px] w-60 md:h-[350px] md:w-full md:max-w-[640px] overflow-hidden rounded-t-xl md:rounded-t-3xl drop-shadow-xl drop-shadow-white">
+                <Image src={coverSrc} alt={coverAlt} fill className="object-cover object-top" />
+              </div>
+            </a>
+          ) : (
+            <div
+              className="mt-8 flex flex-col items-center justify-end rounded-2xl md:rounded-3xl h-[190px] md:h-auto md:px-20 md:pt-16"
+              style={gradientStyle}
+            >
+              <div className="relative mt-3 md:mt-0 h-[150px] w-60 md:h-[350px] md:w-full md:max-w-[640px] overflow-hidden rounded-t-xl md:rounded-t-3xl drop-shadow-xl drop-shadow-white">
+                <Image src={coverSrc} alt={coverAlt} fill className="object-cover object-top" />
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="mt-8 text-left text-md text-dark">
             <h3 className="font-semibold">{designTitle}</h3>

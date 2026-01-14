@@ -6,7 +6,7 @@ import Link from "next/link";
 const socialLinks = [
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/titouan-fran%C3%A7ois-004724226/",
+    href: "https://www.linkedin.com/in/titouan-françois/",
     image: "/images/social/Linkedin.svg",
   },
   {
