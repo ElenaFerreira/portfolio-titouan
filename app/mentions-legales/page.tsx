@@ -209,7 +209,7 @@ export default function MentionsLegales() {
 
             {/* Date de mise à jour */}
             <div className="text-center text-sm text-gray mt-8">
-              <p>Dernière mise à jour : Janvier 2026</p>
+              <p>Dernière mise à jour : Février 2026</p>
             </div>
           </div>
         </div>
