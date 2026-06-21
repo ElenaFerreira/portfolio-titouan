@@ -22,6 +22,7 @@ type ProjectCardProps = {
   designHighlights?: string[];
   tools: Tool[];
   projectUrl?: string;
+  isNew?: boolean;
 };
 
 const DEFAULT_SOLO_AVATAR = "/images/profile.png";
@@ -94,6 +95,7 @@ export function ProjectCard({
   designHighlights = [],
   tools,
   projectUrl,
+  isNew = false,
 }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const cardRef = useRef<HTMLElement>(null);
@@ -135,6 +137,15 @@ export function ProjectCard({
         onKeyDown={handleKeyPress}
       >
         <div className="relative flex h-[190px] w-full flex-col items-center justify-end overflow-hidden rounded-2xl" style={gradientStyle}>
+          {isNew && (
+            <div className="absolute right-2 top-2 z-10 flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 shadow-md">
+              <span className="relative flex" style={{ width: '8px', height: '8px' }}>
+                <span className="absolute inline-flex rounded-full opacity-75 animate-ping" style={{ width: '100%', height: '100%', backgroundColor: '#4ade80' }}></span>
+                <span className="relative inline-flex rounded-full" style={{ width: '8px', height: '8px', backgroundColor: '#22c55e' }}></span>
+              </span>
+              <span className="text-xs font-semibold text-dark">Nouveau</span>
+            </div>
+          )}
           <div className="transition-transform duration-300 group-hover:scale-105">
             <div className="mt-3 text-sm font-semibold uppercase text-white text-center">{brandLabel}</div>
 

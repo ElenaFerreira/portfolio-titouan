@@ -35,6 +35,7 @@ type ProjectData = {
   designHighlights?: string[];
   tools: Tool[];
   projectUrl?: string;
+  isNew?: boolean;
 };
 
 const PROJECTS = projectsData as ProjectData[];
@@ -118,6 +119,7 @@ export function Project() {
                   designHighlights={project.designHighlights}
                   tools={project.tools}
                   projectUrl={project.projectUrl}
+                  isNew={project.isNew}
                 />
               </motion.div>
             ))}
