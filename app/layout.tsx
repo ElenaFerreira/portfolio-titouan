@@ -3,8 +3,8 @@ import "./globals.css";
 import { MusicPlayer } from "./components/MusicPlayer";
 
 export const metadata: Metadata = {
-  title: "Portfolio – Titouan",
-  description: "Portfolio développeur front-end",
+  title: "Titouan Francois | UI/UX Designer",
+  description: "Portfolio de Titouan Francois, Product Designer spécialisé en conception d'expériences utilisateur, interfaces web et produits digitaux.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
