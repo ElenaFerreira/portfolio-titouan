@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Volume1 } from "lucide-react";
+import { AudioVisualBorder } from "./AudioVisualBorder";
 
 interface Track {
   id: number;
@@ -29,10 +30,31 @@ const playlist: Track[] = [
   },
   {
     id: 3,
-    title: "Lost in Paradise",
-    artist: "ALI",
-    cover: "/images/music/Lost_in_Paradise.jpg",
-    src: "/audio/Lost in Paradise.mp3",
+    title: "Comedy",
+    artist: "Gen Hoshino",
+    cover: "/images/music/Spy_x_family.jpg",
+    src: "/audio/SpyXFamily.mp3",
+  },
+  {
+    id: 4,
+    title: "Animal Crossing",
+    artist: "Nintendo",
+    cover: "/images/music/animal_crossing.jpg",
+    src: "/audio/animal_crossing.mp3",
+  },
+  {
+    id: 5,
+    title: "Shiveria Town",
+    artist: "Nintendo",
+    cover: "/images/music/shiveria_town.jpg",
+    src: "/audio/shiveria_town.mp3",
+  },
+  {
+    id: 6,
+    title: "Azalea Town",
+    artist: "Nintendo",
+    cover: "/images/music/azalea_town.jpg",
+    src: "/audio/azalea_town.mp3",
   },
 ];
 
@@ -178,6 +200,9 @@ export function MusicPlayer() {
   };
 
   return (
+    <>
+    {/* Rainbow glow border overlay */}
+    <AudioVisualBorder audioElement={audioRef.current} isPlaying={isPlaying} />
     <div
       className="fixed bottom-6 right-8 z-9999 hidden md:flex min-h-[120px] min-w-[120px] items-center"
       onMouseEnter={() => setIsExpanded(true)}
@@ -264,7 +289,8 @@ export function MusicPlayer() {
       </div>
 
       {/* Audio element */}
-      <audio ref={audioRef} src={currentTrack.src} preload="metadata" />
+      <audio ref={audioRef} src={currentTrack.src} preload="metadata" crossOrigin="anonymous" />
     </div>
+    </>
   );
 }
