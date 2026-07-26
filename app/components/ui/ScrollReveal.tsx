@@ -10,7 +10,7 @@ interface ScrollRevealProps {
   variant?: RevealVariant;
   delay?: number;
   duration?: number;
-  threshold?: number;
+  margin?: string;
   className?: string;
   once?: boolean;
 }
@@ -39,12 +39,12 @@ export function ScrollReveal({
   variant = "fade-up",
   delay = 0,
   duration = 0.6,
-  threshold = 0.2,
+  margin = "0px 0px -10% 0px",
   className,
   once = true,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, amount: threshold });
+  const isInView = useInView(ref, { once, amount: "some", margin: margin as any });
   const shouldReduceMotion = useReducedMotion();
 
   if (shouldReduceMotion) {
@@ -74,7 +74,7 @@ export function ScrollReveal({
 interface StaggerContainerProps {
   children: React.ReactNode;
   staggerDelay?: number;
-  threshold?: number;
+  margin?: string;
   className?: string;
   once?: boolean;
 }
@@ -91,12 +91,12 @@ const staggerContainerVariants: Variants = {
 export function StaggerContainer({
   children,
   staggerDelay = 0.08,
-  threshold = 0.15,
+  margin = "0px 0px -10% 0px",
   className,
   once = true,
 }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, amount: threshold });
+  const isInView = useInView(ref, { once, amount: "some", margin: margin as any });
   const shouldReduceMotion = useReducedMotion();
 
   if (shouldReduceMotion) {

@@ -69,8 +69,8 @@ export function Project() {
       </StaggerContainer>
 
       {/* Filtres */}
-      <ScrollReveal variant="fade-up" delay={0.2}>
-        <div className="mt-8 max-w-full rounded-full bg-gray-lighter p-2 overflow-x-auto scrollbar-hide">
+      <ScrollReveal variant="fade-up" delay={0.2} className="w-full max-w-full px-4 md:px-0 flex justify-center">
+        <div className="mt-8 w-full md:w-max max-w-full overflow-x-auto scrollbar-hide rounded-[2rem] bg-gray-lighter p-2">
           <div className="flex items-center gap-3 w-max">
             {FILTERS.map((filter) => {
               const isActive = filter.id === activeFilter;

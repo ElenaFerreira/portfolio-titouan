@@ -98,7 +98,7 @@ export function About() {
                   <div className="flex size-6 items-center justify-center rounded-full bg-primary">
                     <Check className="size-4 text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-sm font-medium text-dark">2 ans d'expérience en design</span>
+                  <span className="text-sm font-medium text-dark">3 ans d'expérience en design</span>
                 </div>
               </StaggerItem>
             </StaggerContainer>
