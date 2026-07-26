@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AtSign, Mail, Linkedin, MapPin, ArrowRight, Send, Check, AlertCircle, Loader2 } from "lucide-react";
 import { SectionTag } from "./ui/SectionTag";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface ContactCard {
   icon: React.ElementType;
@@ -88,42 +89,51 @@ export function Contact() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
           {/* Partie gauche */}
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-            <SectionTag icon={AtSign} label="Contact" />
+            <StaggerContainer staggerDelay={0.12}>
+              <StaggerItem>
+                <SectionTag icon={AtSign} label="Contact" />
+              </StaggerItem>
 
-            <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Rentrons en contact</h2>
+              <StaggerItem>
+                <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Rentrons en contact</h2>
+              </StaggerItem>
 
-            <p className="mt-3 max-w-md text-sm font-medium text-dark md:text-base">
-              Une question ? Un projet ? Remplissez ce formulaire pour rentrer en contact avec moi.
-            </p>
+              <StaggerItem>
+                <p className="mt-3 max-w-md text-sm font-medium text-dark md:text-base">
+                  Une question ? Un projet ? Remplissez ce formulaire pour rentrer en contact avec moi.
+                </p>
+              </StaggerItem>
+            </StaggerContainer>
 
             {/* Cartes de contact */}
-            <div className="mt-8 flex flex-col gap-3 w-full">
+            <StaggerContainer staggerDelay={0.1} className="mt-8 flex flex-col gap-3 w-full">
               {contactCards.map((card, index) => {
                 const CardWrapper = card.href ? "a" : "div";
                 const cardProps = card.href ? { href: card.href, target: "_blank", rel: "noopener noreferrer" } : {};
 
                 return (
-                  <CardWrapper
-                    key={index}
-                    {...cardProps}
-                    className="group flex items-center gap-4 p-4 bg-white border border-border rounded-xl cursor-pointer text-left"
-                  >
-                    <div className="flex items-center justify-center size-12 rounded-lg border border-border">
-                      <card.icon className="size-5 text-dark" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-gray">{card.label}</p>
-                      <p className="font-semibold text-dark">{card.value}</p>
-                    </div>
-                    <ArrowRight className="size-6 text-gray transition-transform duration-300 ease-out group-hover:-rotate-45 group-hover:text-dark" />
-                  </CardWrapper>
+                  <StaggerItem key={index} variant="scale-in">
+                    <CardWrapper
+                      {...cardProps}
+                      className="group flex items-center gap-4 p-4 bg-white border border-border rounded-xl cursor-pointer text-left transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-md"
+                    >
+                      <div className="flex items-center justify-center size-12 rounded-lg border border-border">
+                        <card.icon className="size-5 text-dark" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray">{card.label}</p>
+                        <p className="font-semibold text-dark">{card.value}</p>
+                      </div>
+                      <ArrowRight className="size-6 text-gray transition-transform duration-300 ease-out group-hover:-rotate-45 group-hover:text-dark" />
+                    </CardWrapper>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
           </div>
 
           {/* Partie droite - Formulaire */}
-          <div className="flex-1">
+          <ScrollReveal variant="fade-right" delay={0.2} className="flex-1">
             <div className="bg-white border border-border rounded-2xl p-6">
               <h3 className="text-lg font-semibold text-dark">Envoyez un message</h3>
               <p className="mt-1 text-sm text-gray">
@@ -197,7 +207,7 @@ export function Contact() {
                 </button>
               </form>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { SectionTag } from "./ui/SectionTag";
 import { IconTag } from "./ui/IconTag";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface Tool {
   name: string;
@@ -73,57 +74,67 @@ const softSkillsList = [
 export function Skills() {
   return (
     <section id="skills" className="flex flex-col items-center px-4 py-16 bg-white">
-      <div className="text-center w-full max-w-[1040px] mx-auto">
+      <StaggerContainer staggerDelay={0.12} className="text-center w-full max-w-[1040px] mx-auto">
         {/* Tag */}
-        <div className="flex justify-center">
+        <StaggerItem className="flex justify-center">
           <SectionTag icon={Cpu} label="Compétences" variant="light" />
-        </div>
+        </StaggerItem>
 
         {/* Titre */}
-        <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Mes compétences</h2>
+        <StaggerItem>
+          <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Mes compétences</h2>
+        </StaggerItem>
 
         {/* Sous-titre */}
-        <p className="mt-3 mx-auto max-w-md text-sm font-medium text-dark md:text-base">
-          Passez en revue mes compétences, ainsi que mes nombreux savoir-être et savoir-faire.
-        </p>
-      </div>
+        <StaggerItem>
+          <p className="mt-3 mx-auto max-w-md text-sm font-medium text-dark md:text-base">
+            Passez en revue mes compétences, ainsi que mes nombreux savoir-être et savoir-faire.
+          </p>
+        </StaggerItem>
+      </StaggerContainer>
 
       {/* Outils */}
-      <div className="w-full max-w-[1040px] mx-auto mt-10">
-        <div className="flex flex-wrap justify-center gap-3">
+      <ScrollReveal variant="fade-up" delay={0.1} className="w-full max-w-[1040px] mx-auto mt-10">
+        <StaggerContainer staggerDelay={0.03} className="flex flex-wrap justify-center gap-3">
           {tools.map((tool) => (
-            <IconTag key={tool.name} label={tool.name} imageSrc={tool.icon} icon={tool.lucideIcon} />
+            <StaggerItem key={tool.name} variant="scale-in">
+              <IconTag label={tool.name} imageSrc={tool.icon} icon={tool.lucideIcon} />
+            </StaggerItem>
           ))}
-        </div>
-      </div>
+        </StaggerContainer>
+      </ScrollReveal>
 
       {/* Séparateur */}
-      <div className="w-full max-w-[600px] mx-auto mt-8">
+      <ScrollReveal variant="fade-up" className="w-full max-w-[600px] mx-auto mt-8">
         <div className="border-t border-border"></div>
-      </div>
+      </ScrollReveal>
 
       {/* Compétences UX */}
-      <div className="w-full max-w-[1040px] mx-auto mt-8">
-        <div className="flex flex-wrap justify-center gap-3">
+      <ScrollReveal variant="fade-up" delay={0.1} className="w-full max-w-[1040px] mx-auto mt-8">
+        <StaggerContainer staggerDelay={0.05} className="flex flex-wrap justify-center gap-3">
           {uxSkillsList.map((skill) => (
-            <IconTag key={skill.name} label={skill.name} icon={skill.icon} />
+            <StaggerItem key={skill.name} variant="scale-in">
+              <IconTag label={skill.name} icon={skill.icon} />
+            </StaggerItem>
           ))}
-        </div>
-      </div>
+        </StaggerContainer>
+      </ScrollReveal>
 
       {/* Séparateur */}
-      <div className="w-full max-w-[600px] mx-auto mt-8">
+      <ScrollReveal variant="fade-up" className="w-full max-w-[600px] mx-auto mt-8">
         <div className="border-t border-border"></div>
-      </div>
+      </ScrollReveal>
 
       {/* Soft skills */}
-      <div className="w-full max-w-[1040px] mx-auto mt-8">
-        <div className="flex flex-wrap justify-center gap-3">
+      <ScrollReveal variant="fade-up" delay={0.1} className="w-full max-w-[1040px] mx-auto mt-8">
+        <StaggerContainer staggerDelay={0.05} className="flex flex-wrap justify-center gap-3">
           {softSkillsList.map((skill) => (
-            <IconTag key={skill.name} label={skill.name} icon={skill.icon} />
+            <StaggerItem key={skill.name} variant="scale-in">
+              <IconTag label={skill.name} icon={skill.icon} />
+            </StaggerItem>
           ))}
-        </div>
-      </div>
+        </StaggerContainer>
+      </ScrollReveal>
     </section>
   );
 }

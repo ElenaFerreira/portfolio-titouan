@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Marquee from "react-fast-marquee";
+import { motion, useReducedMotion } from "framer-motion";
 
 const tools = [
   { name: "Adobe Illustrator", src: "/images/tools/Adobe_Illustrator.svg" },
@@ -18,15 +19,45 @@ const tools = [
   { name: "Wordpress", src: "/images/tools/wordpress.svg" },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1 },
+};
+
 export function HeroCenter() {
+  const shouldReduceMotion = useReducedMotion();
+
+  const transition = (delay: number) => ({
+    duration: shouldReduceMotion ? 0 : 0.6,
+    delay: shouldReduceMotion ? 0 : delay,
+    ease: [0.25, 0.46, 0.45, 0.94] as const,
+  });
+
   return (
     <div className="z-50 flex flex-col items-center gap-6 pt-15 text-center w-[calc(100vw-2rem)] md:w-auto">
       {/* Logo */}
-      <div className="flex size-16 items-center justify-center rounded-xl bg-primary">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={scaleIn}
+        transition={{ duration: shouldReduceMotion ? 0 : 0.6, delay: shouldReduceMotion ? 0 : 0, type: "spring", stiffness: 200, damping: 15 }}
+        className="flex size-16 items-center justify-center rounded-xl bg-primary"
+      >
         <Image src="/images/logo.svg" alt="Logo" width={32} height={32} />
-      </div>
+      </motion.div>
 
-      <div className="flex items-center gap-4 rounded-full border border-border bg-white p-2">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        transition={transition(0.2)}
+        className="flex items-center gap-4 rounded-full border border-border bg-white p-2"
+      >
         {/* Avatars + texte */}
         <div className="flex items-center gap-3">
           <div className="flex -space-x-2">
@@ -45,34 +76,56 @@ export function HeroCenter() {
           Me contacter
           <ArrowRight className="size-3.5" />
         </a>
-      </div>
+      </motion.div>
 
       {/* Titre principal */}
-      <div className="space-y-1">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        transition={transition(0.4)}
+        className="space-y-1"
+      >
         <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
           <span className="block">
-            D’une idée abstraite <br /> à une
+            D'une idée abstraite <br /> à une
             <span className="bg-linear-to-r from-primary to-blue-dark bg-clip-text font-extrabold text-transparent"> interface concrète</span>
           </span>
         </h1>
-      </div>
+      </motion.div>
 
       {/* Texte descriptif */}
-      <p className="max-w-2xl text-sm font-medium text-gray md:text-base">
-        Étudiant en UI/UX Design, je crée des interfaces simples, efficaces et centrées sur l’humain. Un seul objectif : rendre chaque interaction
+      <motion.p
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        transition={transition(0.6)}
+        className="max-w-2xl text-sm font-medium text-gray md:text-base"
+      >
+        Étudiant en UI/UX Design, je crée des interfaces simples, efficaces et centrées sur l'humain. Un seul objectif : rendre chaque interaction
         agréable à travers des designs modernes et intuitifs.
-      </p>
+      </motion.p>
 
       {/* CTA principal */}
-      <a
+      <motion.a
+        initial="hidden"
+        animate="visible"
+        variants={scaleIn}
+        transition={transition(0.8)}
         href="#projects"
         className="cursor-pointer rounded-xl bg-primary px-8 py-3 text-xl text-white transition hover:brightness-110 animation-pulser-discover"
       >
         Découvrir
-      </a>
+      </motion.a>
 
       {/* Slider de logos */}
-      <div className="mt-6 w-full max-w-140 mx-auto">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        transition={transition(1.0)}
+        className="mt-6 w-full max-w-140 mx-auto"
+      >
         <p className="mb-6 text-sm font-semibold text-dark">Mes logiciels les plus utilisés</p>
 
         <div className="relative h-14 overflow-hidden">
@@ -90,7 +143,7 @@ export function HeroCenter() {
             ))}
           </Marquee>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

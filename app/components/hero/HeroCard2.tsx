@@ -1,6 +1,7 @@
 "use client";
 
 import { Paperclip } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const progresses = [
   { label: "Mathématiques", value: 75 },
@@ -8,8 +9,19 @@ const progresses = [
 ];
 
 export function HeroCard2() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="absolute top-130 left-10 rotate-3 z-40 hidden lg:block">
+    <motion.div
+      initial={shouldReduceMotion ? false : { opacity: 0, x: -80, rotate: 10 }}
+      animate={{ opacity: 1, x: 0, rotate: 3 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.9,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      className="absolute top-130 left-10 z-40 hidden lg:block"
+    >
       {/* Trombone */}
       <div className="absolute -top-3 right-10 z-10">
         <div className="flex h-6 w-6 items-center justify-center">
@@ -37,6 +49,6 @@ export function HeroCard2() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

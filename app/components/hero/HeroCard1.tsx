@@ -2,17 +2,29 @@
 
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 
 const tasks = [
   { label: "Terminer le wireframe pour la V.1", state: "default" as const },
   { label: "Revoir le travail pour le client", state: "done" as const },
   { label: "Assigner les tâches aux membres", state: "default" as const },
-  { label: "Assister à l’appel du lancement", state: "done" as const },
+  { label: "Assister à l'appel du lancement", state: "done" as const },
 ];
 
 export function HeroCard1() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="absolute top-46 left-16 -rotate-8 z-40 hidden lg:block">
+    <motion.div
+      initial={shouldReduceMotion ? false : { opacity: 0, x: -80, rotate: -15 }}
+      animate={{ opacity: 1, x: 0, rotate: -8 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.6,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      className="absolute top-46 left-16 z-40 hidden lg:block"
+    >
       {/* Épingle */}
       <div className="absolute -top-3 right-1/3 z-10 -translate-x-1/2 scale-x-[-1] -rotate-20">
         <div className="flex size-6 items-center justify-center">
@@ -40,7 +52,7 @@ export function HeroCard1() {
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

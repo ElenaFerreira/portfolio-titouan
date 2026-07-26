@@ -2,10 +2,22 @@
 
 import Image from "next/image";
 import { Paperclip } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 export function HeroCard3() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="absolute top-30 right-0 rotate-8 z-40 hidden lg:block">
+    <motion.div
+      initial={shouldReduceMotion ? false : { opacity: 0, x: 80, rotate: 15 }}
+      animate={{ opacity: 1, x: 0, rotate: 8 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.7,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      className="absolute top-30 right-0 z-40 hidden lg:block"
+    >
       {/* Trombones */}
       <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-8 z-10">
         <div className="h-6 w-6 flex items-center justify-center -rotate-25">
@@ -34,6 +46,6 @@ export function HeroCard3() {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

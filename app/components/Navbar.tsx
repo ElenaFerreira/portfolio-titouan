@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Download, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 // Filtre SVG pour l'effet liquid glass (version complète)
 function GlassDistortionFilter() {
@@ -30,6 +31,7 @@ function GlassDistortionFilter() {
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -37,7 +39,16 @@ export function Navbar() {
   return (
     <>
       <GlassDistortionFilter />
-      <header className="fixed top-0 left-0 w-full z-[60] flex flex-col items-center px-4">
+      <motion.header
+        initial={shouldReduceMotion ? false : { opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          delay: 0.1,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+        className="fixed top-0 left-0 w-full z-[60] flex flex-col items-center px-4"
+      >
         {/* Navbar avec effet Liquid Glass */}
         <nav className="liquid-glass-wrapper mt-4 h-16 w-full max-w-4xl rounded-full border border-border">
           {/* Layers de l'effet liquid glass */}
@@ -129,7 +140,7 @@ export function Navbar() {
             </div>
           </div>
         )}
-      </header>
+      </motion.header>
     </>
   );
 }

@@ -4,6 +4,7 @@ import { Briefcase, CalendarDays } from "lucide-react";
 import Image from "next/image";
 import { SectionTag } from "./ui/SectionTag";
 import { IconTag } from "./ui/IconTag";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 
 interface JobExperience {
   id: number;
@@ -48,16 +49,25 @@ export function Jobs() {
   return (
     <section id="jobs" className="flex flex-col items-center px-4 py-16 bg-gray-lighter">
       <div className="flex flex-col items-center md:items-start text-center md:text-left w-full max-w-[1040px] mx-auto">
-        {/* Tag */}
-        <SectionTag icon={Briefcase} label="Parcours" variant="white" />
+        {/* Header animé */}
+        <StaggerContainer staggerDelay={0.12}>
+          {/* Tag */}
+          <StaggerItem>
+            <SectionTag icon={Briefcase} label="Parcours" variant="white" />
+          </StaggerItem>
 
-        {/* Titre */}
-        <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Mon parcours</h2>
+          {/* Titre */}
+          <StaggerItem>
+            <h2 className="mt-6 text-3xl font-bold leading-tight text-dark md:text-4xl">Mon parcours</h2>
+          </StaggerItem>
 
-        {/* Sous-titre */}
-        <p className="mt-3 max-w-xl text-sm font-medium text-dark md:text-base">
-          Initialement développeur web, j'ai orienté mon profil vers l'UI/UX design, afin de créer des expériences à la fois utiles et cohérentes.
-        </p>
+          {/* Sous-titre */}
+          <StaggerItem>
+            <p className="mt-3 max-w-xl text-sm font-medium text-dark md:text-base">
+              Initialement développeur web, j'ai orienté mon profil vers l'UI/UX design, afin de créer des expériences à la fois utiles et cohérentes.
+            </p>
+          </StaggerItem>
+        </StaggerContainer>
       </div>
 
       {/* Timeline */}
@@ -69,12 +79,14 @@ export function Jobs() {
           {/* Expériences */}
           <div className="space-y-8">
             {experiences.map((experience, index) => (
-              <div key={experience.id} className="relative pl-12">
+              <ScrollReveal key={experience.id} variant="fade-left" delay={index * 0.15} className="relative pl-12">
                 {/* Point de la timeline */}
-                <div className="absolute left-0 top-6 size-4 rounded-full bg-primary border-3 border-white shadow-md" />
+                <ScrollReveal variant="scale-in" delay={index * 0.15 + 0.1} className="absolute left-0 top-6">
+                  <div className="size-4 rounded-full bg-primary border-3 border-white shadow-md" />
+                </ScrollReveal>
 
                 {/* Carte d'expérience */}
-                <div className="bg-white rounded-2xl p-6 border border-border">
+                <div className="bg-white rounded-2xl p-6 border border-border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
                   {/* En-tête avec logo, titre, compagnie et date */}
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 pb-4">
                     {/* Contenu gauche */}
@@ -107,7 +119,7 @@ export function Jobs() {
                     <p className="text-sm text-gray leading-relaxed">{experience.description}</p>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

@@ -2,10 +2,22 @@
 
 import Image from "next/image";
 import { LayoutTemplate } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 export function HeroCard4() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="absolute top-135 right-10 -rotate-7 z-40 hidden lg:block">
+    <motion.div
+      initial={shouldReduceMotion ? false : { opacity: 0, x: 80, rotate: -14 }}
+      animate={{ opacity: 1, x: 0, rotate: -7 }}
+      transition={{
+        duration: 0.8,
+        delay: 1.0,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      className="absolute top-135 right-10 z-40 hidden lg:block"
+    >
       {/* Épingle */}
       <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-30">
         <div className="flex size-6 items-center justify-center">
@@ -26,8 +38,8 @@ export function HeroCard4() {
 
         {/* Texte */}
         <h3 className="text-sm font-semibold text-dark">Simplicité</h3>
-        <p className="mt-1 text-xs font-medium text-gray">On s’occupe de tout, du design à la mise en ligne.</p>
+        <p className="mt-1 text-xs font-medium text-gray">On s'occupe de tout, du design à la mise en ligne.</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
